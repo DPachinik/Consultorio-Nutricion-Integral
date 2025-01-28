@@ -8,9 +8,11 @@ export default {
       },
       fontFamily: {
         lora: ["Lora", "sans-serif"],
+        mulish:['Mulish', 'sans-serif'],
+        cormorant: ['Cormorant Garamond', 'serif'],
       },
       colors: {
-        body: "#ffffff",
+        body: "hsl(0 0% 100%)",
         limon: "#8DC044",
         lima: "#6E9B2F",
         carmesi: "#A63F51",

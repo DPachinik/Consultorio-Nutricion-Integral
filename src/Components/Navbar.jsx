@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import { FiMenu, FiX } from 'react-icons/fi';
-import logotipo from '../assets/logo-navbar.jpg';
 import { Link } from 'react-router-dom';
+import { LuApple } from 'react-icons/lu';
 
 const mobileItemsClases =
   'flex hover:bg-limon hover:text-white w-full h-[80px] items-center justify-center text-[24px]';
 const desktopItemnsClases =
-  'flex hover:border-b-[1px] hover:border-carmesi hover:text-carmesi   items-center  md:text-md lg:text-lg';
+  'flex font-mulish font-semibold hover:border-b-[1px] hover:border-carmesi hover:text-carmesi   items-center md:text-center  lg:text-md text-sm';
 
 const Navbar = ({ menuOpen, setMenuOpen }) => {
   Navbar.propTypes = {
@@ -25,16 +25,13 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
   };
 
   return (
-    <nav className="relative flex h-[85px] w-full items-center justify-between border-b-[0.5px] border-black bg-body">
-      <div className="h-[64px] w-[280px] md:w-[400px]">
-        <img
-          className="h-full w-full"
-          src={logotipo}
-          alt="logo del consultorio nutricional"
-        />
+    <nav className="relative flex h-[50px] w-full items-center justify-between border-b-[0.5px] border-black bg-body">
+      <div className="ml-4 flex w-full gap-2">
+        <LuApple className="flex h-6 w-6 text-carmesi" />
+        <p className="font-mulish font-semibold">Jessica Pachinik</p>
       </div>
       <div
-        className={`Navbar-items absolute left-[0] top-[85px] z-10 flex h-[600px] w-full flex-col items-center justify-center border-b-[0.5px] border-black bg-white font-lora font-normal italic text-carmesi ${menuOpen ? 'opacity-100' : 'pointer-events-none opacity-0'} transition-opacity duration-1000 ease-in-out md:hidden`}
+        className={`Navbar-items absolute left-[0] top-[50px] z-10 flex h-[600px] w-full flex-col items-center justify-center border-b-[0.5px] border-black bg-white font-lora font-normal italic text-carmesi ${menuOpen ? 'opacity-100' : 'pointer-events-none opacity-0'} transition-opacity duration-1000 ease-in-out md:hidden`}
       >
         <ul
           className="flex w-full flex-col items-center justify-center gap-[30px] py-[65px]"

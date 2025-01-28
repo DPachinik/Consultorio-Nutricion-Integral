@@ -6,14 +6,14 @@ import Inicio from './Pages/Inicio';
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <>
+    <div className="h-screen md:overflow-hidden">
       <Router>
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <Routes>
-          <Route path="/" element={<Inicio />} />
+          <Route path="/" element={<Inicio menuOpen={menuOpen} />} />
         </Routes>
       </Router>
-    </>
+    </div>
   );
 }
 

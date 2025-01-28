@@ -29,6 +29,7 @@ export default [
       prettier,
     },
     rules: {
+      'linebreak-style': 'off',
       ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...react.configs['jsx-runtime'].rules,
@@ -38,7 +39,6 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
-      'prettier/prettier': 'error',
     },
   },
 ];
