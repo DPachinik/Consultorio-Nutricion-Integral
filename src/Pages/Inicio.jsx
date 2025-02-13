@@ -99,9 +99,7 @@ const Inicio = ({ menuOpen }) => {
       </div>
       <div
         className={`fixed left-0 top-[650px] h-[calc(100%-650px)] w-full bg-black/35 ${menuOpen ? '' : 'hidden'} md:hidden`}
-      >
-        {' '}
-      </div>
+      ></div>
 
       <div className="hidden h-full w-full md:grid md:grid-cols-[1fr_1fr_1fr] lg:grid-cols-[500px_1fr_1fr]">
         <div className="h-max-screen flex w-full items-end justify-end bg-alimentos bg-cover bg-center">

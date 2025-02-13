@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { FiMenu, FiX } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { LuApple } from 'react-icons/lu';
 
 const mobileItemsClases =
@@ -42,35 +42,35 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
             onClick={HandleItemClick}
             role="menuitem"
           >
-            <Link to={'/'}>Inicio</Link>
+            <NavLink to={'/'}>Inicio</NavLink>
           </li>
           <li
             className={mobileItemsClases}
             onClick={HandleItemClick}
             role="menuitem"
           >
-            <Link to={'/'}>Sobre Mi</Link>
+            <NavLink to={'/SobreMi'}>Sobre Mi</NavLink>
           </li>
           <li
             className={mobileItemsClases}
             onClick={HandleItemClick}
             role="menuitem"
           >
-            <Link to={'/'}>Consultoria Nutricional</Link>
+            <NavLink to={'/'}>Consultoria Nutricional</NavLink>
           </li>
           <li
             className={mobileItemsClases}
             onClick={HandleItemClick}
             role="menuitem"
           >
-            <Link to={'/'}>Contacto</Link>
+            <NavLink to={'/'}>Contacto</NavLink>
           </li>
           <li
             className={mobileItemsClases}
             onClick={HandleItemClick}
             role="menuitem"
           >
-            <Link to={'/'}>Tienda</Link>
+            <NavLink to={'/'}>Tienda</NavLink>
           </li>
         </ul>
       </div>
@@ -100,35 +100,70 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
             onClick={HandleItemClick}
             role="menuitem"
           >
-            <Link to={'/'}>Inicio</Link>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? 'border-b-[0.5px] border-carmesi text-carmesi' : ''
+              }
+            >
+              Inicio
+            </NavLink>
           </li>
           <li
             className={desktopItemnsClases}
             onClick={HandleItemClick}
             role="menuitem"
           >
-            <Link to={'/'}>Sobre Mi</Link>
+            <NavLink
+              to="/SobreMi"
+              className={({ isActive }) =>
+                isActive ? 'border-b-[0.5px] border-carmesi text-carmesi' : ''
+              }
+            >
+              Sobre Mi
+            </NavLink>
           </li>
           <li
             className={desktopItemnsClases}
             onClick={HandleItemClick}
             role="menuitem"
           >
-            <Link to={'/'}>Consultoria Nutricional</Link>
+            <NavLink
+              to={'/Consultoria'}
+              className={({ isActive }) =>
+                isActive ? 'border-b-[0.5px] border-carmesi text-carmesi' : ''
+              }
+            >
+              Consultoria Nutricional
+            </NavLink>
           </li>
           <li
             className={desktopItemnsClases}
             onClick={HandleItemClick}
             role="menuitem"
           >
-            <Link to={'/'}>Contacto</Link>
+            <NavLink
+              to={'/Contacto'}
+              className={({ isActive }) =>
+                isActive ? 'border-b-[0.5px] border-carmesi text-carmesi' : ''
+              }
+            >
+              Contacto
+            </NavLink>
           </li>
           <li
             className={desktopItemnsClases}
             onClick={HandleItemClick}
             role="menuitem"
           >
-            <Link to={'/'}>Tienda</Link>
+            <NavLink
+              to={'/Tienda'}
+              className={({ isActive }) =>
+                isActive ? 'border-b-[0.5px] border-carmesi text-carmesi' : ''
+              }
+            >
+              Tienda
+            </NavLink>
           </li>
         </ul>
       </div>
