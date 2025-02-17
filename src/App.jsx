@@ -8,7 +8,7 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="h-screen md:overflow-hidden">
+    <div className="h-screen">
       <Router>
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <Routes>

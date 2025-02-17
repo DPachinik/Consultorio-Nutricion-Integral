@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { FaWhatsapp } from 'react-icons/fa';
+import Carousel from '../Components/Carrousel';
 
 const SobreMi = ({ menuOpen }) => {
   SobreMi.propTypes = {
@@ -9,7 +10,7 @@ const SobreMi = ({ menuOpen }) => {
   return (
     <>
       <div>
-        <div className="relative flex h-[422px] w-[440px] flex-col bg-nutri pl-8 pt-14 text-carmesi">
+        <div className="relative flex h-[422px] w-[440px] flex-col bg-nutri pl-8 pt-14 text-rose-700">
           <div className="flex flex-col items-center self-start text-center font-lora">
             <p className="text-md flex font-semibold">Conóceme</p>
             <p className="text-2xl font-bold">JESSICA</p>
@@ -92,6 +93,14 @@ const SobreMi = ({ menuOpen }) => {
       <div
         className={`fixed left-0 top-[650px] h-[calc(100vh-650px)] w-full bg-black/35 ${menuOpen ? '' : 'hidden'} md:hidden`}
       ></div>
+
+      <div className="flex items-end justify-center">
+        <h2 className="my-12 flex font-lora text-3xl font-bold italic text-carmesi">
+          ¿Cómo puedo ayudarte?
+        </h2>
+      </div>
+
+      <Carousel />
     </>
   );
 };
