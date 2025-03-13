@@ -1,107 +1,139 @@
 import PropTypes from 'prop-types';
+import Carousel from '../Components/Carousel';
+import { GiCheckMark } from 'react-icons/gi';
+import Footer from '../Components/Footer';
+import Tarjetas from '../Components/Tarjetas';
+import BotonConsulta from '../Components/BotonConsulta';
 import { FaWhatsapp } from 'react-icons/fa';
-import Carousel from '../Components/Carrousel';
+import Flecha from '../assets/flecha.png';
+import Nutri from '../assets/NutriJessy.png';
 
-const SobreMi = ({ menuOpen }) => {
+const SobreMi = () => {
   SobreMi.propTypes = {
     menuOpen: PropTypes.bool.isRequired,
   };
 
   return (
-    <>
-      <div>
-        <div className="relative flex h-[422px] w-[440px] flex-col bg-nutri pl-8 pt-14 text-rose-700">
-          <div className="flex flex-col items-center self-start text-center font-lora">
-            <p className="text-md flex font-semibold">Conóceme</p>
-            <p className="text-2xl font-bold">JESSICA</p>
-            <p className="text-2xl font-bold">PACHINIK</p>
+    <div className="">
+      <div className="flex h-[640px] w-full grid-cols-2 flex-col bg-encabezado bg-cover bg-bottom bg-no-repeat pt-[50px] md:grid md:bg-encabezadomd lg:h-[620px]">
+        <div className="text-md hidden flex-col items-center justify-start gap-3 text-center font-bold md:flex">
+          <div className="flex w-full justify-start pt-4">
+            <img
+              src={Flecha}
+              alt="imagen de una flecha"
+              className="h-[100px] w-[200px]"
+            />
+          </div>
+
+          <div className="px-5 py-10 text-center text-primario">
+            <p className="font-sourceSerif text-lg font-bold italic tracking-wide md:text-2xl lg:text-3xl">
+              CONSTRUYE TU <span className="text-carmesi"> MEJOR VERSIÓN</span>
+            </p>
+            <p className="mt-4 text-sm font-normal text-primario md:text-lg lg:text-xl">
+              Trabajemos juntos para desbloquear tu máximo potencial con planes
+              de nutrición personalizados, asesoría experta y cambios de estilo
+              de vida adaptados a tus necesidades.
+            </p>
+          </div>
+
+          <div className="flex w-full rotate-180 pt-4">
+            <img
+              src={Flecha}
+              alt="imagen de una flecha"
+              className="h-[100px] w-[200px]"
+            />
           </div>
         </div>
-        <div className="absolute left-[12px] top-[400px] flex h-[60px] w-[60px] items-center justify-center rounded-[6px] bg-limon">
-          <FaWhatsapp
-            className="text-[42px] text-white transition ease-in-out hover:rotate-6 hover:scale-110"
-            aria-label="boton de WhastApp "
+
+        <div className="flex w-full flex-col items-center font-sourceSerif font-medium text-primario">
+          <div className="flex items-start text-left text-[30px]">
+            <p className="mx-auto pt-2 text-center md:hidden">
+              CONSTRUYE TU <span className="text-carmesi">MEJOR VERSIÓN</span>{' '}
+            </p>
+            <p className="">
+              <span className="text-carmesi"></span>{' '}
+            </p>
+          </div>
+          <img
+            src={Nutri}
+            alt="Nutricionista Jessica Pachinik"
+            className="flex h-[376px] w-[238px] md:mt-6"
           />
-        </div>
-        <div className="mb-4 ml-3 flex flex-col rounded-l-md bg-gradient-to-b from-[#A63F51] via-[#B94B5D] to-[#D65A72] p-2 text-end font-mulish text-sm text-white shadow-inner">
-          <p>
-            Nutricionista Dietista de la Universidad Católica de Itapúa (UCI)
-          </p>
-          <p>Antropometrista ISAK I. </p>
-        </div>
-        <div className="my-16 flex px-3">
-          <p className="text-center font-lora text-[24px] italic leading-[2]">
-            “Apasionada por promover un estilo de vida saludable, me dedico a
-            encontrar soluciones personalizadas para cada paciente, ayudándolos
-            a alcanzar una mejor calidad de vida y fortalecer su autoestima.”
-          </p>
+
+          <div className="flex w-full flex-col items-end justify-end pr-3 text-end">
+            <p className="text-[25px] text-carmesi">JESSICA PACHINIK</p>
+            <p className="pl-14 text-[12px]">NUTRICIONISTA CERTIFICADA (UCI)</p>
+            <p className="pl-14 text-[12px]">ANTROPOMETRISTA ISAK I</p>
+          </div>
         </div>
       </div>
+
+      <div className="absolute left-[8px] top-[560px] flex h-[60px] w-[60px] items-center justify-center rounded-[6px] bg-lime-500">
+        <FaWhatsapp
+          className="text-[42px] text-white transition ease-in-out hover:rotate-6 hover:scale-110"
+          aria-label="boton de WhastApp "
+        />
+      </div>
+
+      <div className="my-16 flex px-3">
+        <p className="text-center font-sourceSerif text-lg leading-[2] text-primario md:text-xl lg:text-2xl">
+          “Apasionada por promover un estilo de vida saludable, me dedico a
+          encontrar soluciones personalizadas para cada paciente, ayudándolos a
+          alcanzar una mejor calidad de vida y fortalecer su autoestima.”
+        </p>
+      </div>
+
+      <BotonConsulta />
+
       <div>
-        <h2 className="my-12 flex justify-center font-lora text-3xl font-semibold italic text-carmesi">
-          {' '}
-          ¿ Soy ?
+        <h2 className="my-12 flex justify-center font-sourceSerif text-3xl font-medium text-carmesi">
+          ¿ SOY ?
         </h2>
       </div>
 
-      <div className="mx-3 mb-6 grid grid-cols-2 rounded-2xl bg-gradient-to-br from-slate-400 via-slate-400 to-slate-500 text-justify font-mulish text-sm clip-tl-45">
-        <div className="flex rounded-2xl bg-woman bg-cover bg-bottom clip-tl-45"></div>
-
-        <div className="flex flex-col py-4 text-justify leading-[1]">
-          <p className="pl-4 text-2xl font-bold text-lime-400">Nutricionista</p>
-          <p className="px-4 pt-2 text-sm text-white">
-            Un dietista-nutricionista es un profesional de la salud reconocido
-            como un experto en alimentación, nutrición y dietética.
-          </p>
-          <p className="px-4 text-sm text-white">
-            Interviene en la alimentación de las personas desde distintos
-            lugares: La nutrición en la salud y en la enfermedad, la
-            prescripción dietaria y la reeducación alimentaria.
-          </p>
-        </div>
-      </div>
-
-      <div className="mx-3 mb-6 grid grid-cols-2 rounded-2xl bg-gradient-to-bl from-slate-400 via-slate-400 to-slate-500 text-justify font-mulish text-sm shadow-sm shadow-inherit clip-tr-45">
-        <div className="flex flex-col py-3 text-justify leading-[1]">
-          <p className="pl-2 text-2xl font-bold text-lime-400">
-            Antropometrista
-          </p>
-          <p className="p-4 text-sm text-white">
-            Una antropometrista es un profesional especializado en la medición
-            de las dimensiones físicas del cuerpo humano. <br />
-            Utiliza técnicas y herramientas para evaluar características como la
-            altura, el peso, el índice de masa corporal (IMC), y las
-            proporciones corporales.
-          </p>
-        </div>
-        <div className="flex h-full w-full items-center justify-center rounded-2xl bg-antropometria bg-cover bg-right clip-tr-45"></div>
-      </div>
-
-      <div className="mx-3 mb-4 grid grid-cols-2 rounded-2xl bg-gradient-to-br from-slate-400 via-slate-400 to-slate-500 text-justify font-mulish text-sm clip-tl-45">
-        <div className="flex rounded-2xl bg-consulta bg-cover bg-bottom clip-tl-45"></div>
-        <div className="flex flex-col py-4 text-justify">
-          <p className="pl-4 text-2xl font-bold text-lime-400">Coach</p>
-          <p className="px-4 pt-4 font-medium text-white">
-            El coach es un observador activo que acompaña al paciente en un
-            proceso de autoconocimiento <br />
-            El coach se encarga de mostrar el camino hacia el objetivo y
-            ofrecerle claridad en el enfoque. Lo ayuda a aumentar su motivación
-            y confianza, y a fijar metas individuales y asequibles.
-          </p>
-        </div>
-      </div>
-      <div
-        className={`fixed left-0 top-[650px] h-[calc(100vh-650px)] w-full bg-black/35 ${menuOpen ? '' : 'hidden'} md:hidden`}
-      ></div>
+      <Tarjetas />
 
       <div className="flex items-end justify-center">
-        <h2 className="my-12 flex font-lora text-3xl font-bold italic text-carmesi">
-          ¿Cómo puedo ayudarte?
+        <h2 className="my-12 flex font-sourceSerif text-3xl font-medium text-carmesi">
+          ¿CÓMO PUEDO AYUDARTE?
         </h2>
       </div>
 
       <Carousel />
-    </>
+
+      <div className="flex items-end justify-center">
+        <h2 className="my-12 flex font-sourceSerif text-3xl font-medium text-carmesi">
+          ¿ME COMPROMETO A?
+        </h2>
+      </div>
+
+      <div className="mb-4 mt-4 flex w-full flex-col gap-5 bg-cover font-mulish text-sm">
+        {[
+          'Guiarte hacia una alimentación equilibrada y saludable.',
+          'Brindarte un plan nutricional personalizado.',
+          'Acompañarte en cada paso para que alcances tus objetivos de salud.',
+          'Orientarte en base a mi formación y experiencia profesional de +10 años.',
+          'Fomentar hábitos sostenibles que mejoren tu calidad de vida.',
+          'Escucharte y entender tus metas para proporcionarte el mejor apoyo.',
+          'Establecer una relación con la comida de manera consciente y positiva.',
+        ].map((text, index) => (
+          <div
+            key={index}
+            className={`mt-3 flex h-[50px] flex-row items-center gap-2 bg-white p-4 lg:h-[80px] lg:text-lg ${index % 2 === 0 ? 'mr-7 items-end justify-end rounded-r-full border-l-0 bg-gradient-to-r from-slate-400 via-slate-800 to-slate-800 text-end text-white shadow-md shadow-slate-500 lg:mr-[300px]' : 'ml-7 rounded-l-full border-r-0 bg-gradient-to-r from-lime-200 via-lime-500 to-fondo text-primario shadow-md shadow-fondo lg:ml-[300px]'} `}
+          >
+            <GiCheckMark
+              className={`shrink-0 rounded-full text-[22px] text-lime-400 ${index % 2 === 0 ? 'order-2' : 'order-1 text-slate-700'}`}
+            />
+            <p
+              className={`leading-normal ${index % 2 === 0 ? 'order-1' : 'order-2'} `}
+            >
+              {text}
+            </p>
+          </div>
+        ))}
+      </div>
+      <Footer />
+    </div>
   );
 };
 
