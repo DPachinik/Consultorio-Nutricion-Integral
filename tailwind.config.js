@@ -12,6 +12,8 @@ export default {
         encabezado:"url('/verde.svg')",
         encabezadomd:"url('/verdes.svg')",
         pie:"url('/fondo2.svg')",
+        conectividad:"url('./src/assets/conectividad.png')",
+        
 
 
       },

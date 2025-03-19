@@ -7,6 +7,7 @@ import BotonConsulta from '../Components/BotonConsulta';
 import { FaWhatsapp } from 'react-icons/fa';
 import Flecha from '../assets/flecha.png';
 import Nutri from '../assets/NutriJessy.png';
+import { SlidesCard1 } from '../Data/SlidesCard1';
 
 const SobreMi = () => {
   SobreMi.propTypes = {
@@ -99,7 +100,7 @@ const SobreMi = () => {
         </h2>
       </div>
 
-      <Carousel />
+      <Carousel slides={SlidesCard1} />
 
       <div className="flex items-end justify-center">
         <h2 className="my-12 flex font-sourceSerif text-3xl font-medium text-carmesi">

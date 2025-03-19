@@ -1,12 +1,20 @@
-import imagen1 from '../assets/genetic.jpeg';
-import imagen2 from '../assets/actividad.jpg';
-import imagen3 from '../assets/objetivo.jpg';
-import imagen4 from '../assets/evaluacion.jpg';
 import { motion, useInView } from 'framer-motion';
 import { useState, useEffect, useRef } from 'react';
 import BotonConsulta from './BotonConsulta';
+import PropTypes from 'prop-types';
 
-const Carousel = () => {
+const Carousel = ({ slides }) => {
+  Carousel.propTypes = {
+    slides: PropTypes.arrayOf(
+      PropTypes.shape({
+        imagen: PropTypes.string.isRequired,
+        titulo: PropTypes.string.isRequired,
+        parrafo1: PropTypes.string.isRequired,
+        parrafo2: PropTypes.string,
+      })
+    ).isRequired,
+  };
+  const imagenes = slides.every((slide) => slide.parrafo1);
   const carrosel = useRef();
   const [width, setWidth] = useState(0);
 
@@ -17,40 +25,11 @@ const Carousel = () => {
     setWidth(carrosel.current?.scrollWidth - carrosel.current?.offsetWidth);
   }, []);
 
-  const slide = [
-    {
-      imagen: imagen1,
-      titulo: 'INDIVIDUALIDAD',
-      parrafo1:
-        'Mi enfoque es 100% individualizado, tengo en cuenta no sólo la composición corporal actual, sino también la historia, el entorno y las posibilidades.',
-    },
-    {
-      imagen: imagen2,
-      titulo: 'ACTIVIDAD',
-      parrafo1:
-        'Atiendo cada perfil de paciente, actividades físicas y modalidad deportiva.',
-      parrafo2:
-        'Trabajo de manera integral con cada paciente, considerando su nivel de actividad, estado de salud y necesidades energéticas.',
-    },
-    {
-      imagen: imagen3,
-      titulo: 'OBJETIVOS',
-      parrafo1:
-        'Ayudo a quienes buscan un mejor rendimiento, cambios en la composición corporal, ya sea pérdida de peso, definición, hipertrofia o una mejor performance deportiva.',
-    },
-    {
-      imagen: imagen4,
-      titulo: 'SEGUIMIENTO',
-      parrafo1:
-        'Una vez que alcanzamos tu meta, el acompañamiento sigue siendo fundamental. Te ayudo a mantener tus logros, ajustar hábitos y seguir evolucionando, asegurando que tu bienestar sea duradero.',
-    },
-  ];
-
   return (
-    <div className="mt-6 flex w-full flex-col items-center justify-center gap-8 p-8">
+    <div className="flex w-full flex-col items-center justify-center gap-8 p-8">
       <motion.div
         whileTap={{ cursor: 'grabbing' }}
-        className="flex h-[350px] w-[440px] cursor-grab overflow-hidden md:w-[640px] lg:w-[950px]"
+        className="flex h-[380px] w-[440px] cursor-grab overflow-hidden md:w-[640px] lg:w-[950px]"
         ref={carrosel}
       >
         <motion.div
@@ -62,23 +41,29 @@ const Carousel = () => {
           animate={enVentana ? { x: 0 } : {}}
           transition={{ duration: 3 }}
         >
-          {slide.map((elementos) => (
+          {slides.map((elementos, index) => (
             <motion.div
-              key={elementos.titulo}
-              className="flex h-[350px] w-[300px] flex-col items-center gap-3 rounded-lg bg-gradient-to-t from-slate-500 via-slate-700 to-slate-400 text-justify text-white lg:w-[420px]"
+              key={index}
+              className={`flex ${imagenes ? 'h-[350px]' : 'h-[380px]'} w-[300px] flex-col items-center gap-3 rounded-xl bg-gradient-to-t from-slate-500 via-slate-700 to-slate-400 text-justify text-white lg:w-[420px]`}
             >
               <img
                 src={elementos.imagen}
                 alt={elementos.titulo}
-                className="h-[150px] w-full rounded-t-lg object-cover shadow-inner shadow-black"
+                className={`pointer-events-none w-full rounded-t-lg object-cover shadow-inner shadow-black ${imagenes ? 'h-[150px]' : 'h-full rounded-lg object-fill object-bottom'}`}
               />
-              <div className="text-justify">
-                <h3 className="pl-4 font-sourceSerif text-xl font-semibold text-lime-500">
-                  {elementos.titulo}
-                </h3>
-                <p className="px-4 text-sm lg:text-lg">{elementos.parrafo1}</p>
-                <p className="px-4 text-sm lg:text-lg">{elementos.parrafo2}</p>
-              </div>
+              {elementos.parrafo1 && (
+                <div className="text-justify">
+                  <h3 className="pl-4 font-sourceSerif text-xl font-semibold text-lime-500">
+                    {elementos.titulo}
+                  </h3>
+                  <p className="px-4 text-sm lg:text-lg">
+                    {elementos.parrafo1}
+                  </p>
+                  <p className="px-4 text-sm lg:text-lg">
+                    {elementos.parrafo2}
+                  </p>
+                </div>
+              )}
             </motion.div>
           ))}
         </motion.div>
