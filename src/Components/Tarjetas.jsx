@@ -46,10 +46,10 @@ const Tarjetas = () => {
       {contenido.map((tarjeta, index) => (
         <div
           key={tarjeta.titulo}
-          className={`mx-3 mb-8 grid h-[320px] grid-cols-2 rounded-2xl bg-gradient-to-t from-fondo via-lime-100 to-lime-50 font-mulish text-sm shadow-inner md:h-[250px] lg:h-[300px] lg:w-[760px] ${index % 2 === 0 ? 'clip-tl-45' : 'clip-tr-45'} ${classMap[index] || ''} }`}
+          className={`mx-3 mb-8 grid h-[320px] grid-cols-2 rounded-2xl border-[1px] border-lime-700 bg-gradient-to-t from-fondo via-lime-100 to-lime-50 font-mulish text-sm shadow-inner md:h-[250px] lg:w-[760px] ${index % 2 === 0 ? 'clip-tl-45' : 'clip-tr-45'} ${classMap[index] || ''} }`}
         >
           <div
-            className={`flex h-full w-full rounded-2xl bg-cover bg-center ${index % 2 === 0 ? 'order-1' : 'order-2'}`}
+            className={`flex h-full w-full rounded-2xl bg-cover bg-center bg-no-repeat ${index % 2 === 0 ? 'order-1' : 'order-2'}`}
             style={{ backgroundImage: `url(${tarjeta.imagen})` }}
           ></div>
           <div
@@ -58,7 +58,7 @@ const Tarjetas = () => {
             <h3 className="pl-4 font-sourceSerif text-xl font-semibold text-subtitulo md:font-bold">
               {tarjeta.titulo}
             </h3>
-            <p className="md:text-md px-4 pt-2 text-sm font-medium tracking-tight text-primario lg:text-lg">
+            <p className="md:text-md lg:text-md px-4 pt-2 text-sm font-medium tracking-tight text-primario">
               {tarjeta.parrafo1}
             </p>
           </div>

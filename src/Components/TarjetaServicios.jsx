@@ -67,26 +67,31 @@ const TarjetaServicios = () => {
   };
 
   return (
-    <div className="flex flex-col items-center gap-4">
+    <div className="flex flex-col items-center gap-4 md:mx-4 md:grid md:grid-cols-2 md:place-items-center lg:grid-cols-3 lg:gap-8">
       {servicios.map((servicio, index) => (
         <div
           key={index}
           onMouseEnter={() => handleMouseEnter(index)}
           onMouseLeave={() => handleMouseLeave(index)}
-          className={`relative flex h-[150px] w-[300px] items-center justify-center rounded-lg bg-cover bg-center transition-all duration-1000 ${description[index] ? 'h-[300px] w-[400px]' : ''}`}
+          className={`relative flex h-[150px] w-[350px] items-center justify-center rounded-lg bg-cover bg-center transition-all duration-1000 hover:cursor-pointer lg:h-[200px] lg:w-[320px] ${description[index] ? 'h-[300px] lg:h-[250px] lg:w-[400px]' : ''}`}
           style={{ backgroundImage: `url(${servicio.imagen})` }}
         >
           <div
-            className={`absolute inset-0 left-0 top-0 rounded-lg bg-black/60 ${description[index] ? 'bg-black' : ''} `}
+            className={`absolute inset-0 left-0 top-0 rounded-lg bg-black/50 ${description[index] ? 'bg-black' : ''} `}
           />
 
           <div className="relative z-10 text-center">
             {description[index] ? (
-              <p className="font-sourceSerif text-sm font-normal text-white">
-                {servicio.texto}
-              </p>
+              <div>
+                <p className="font-sourceSerif text-lg font-normal text-white drop-shadow-[0_0_10px_rgba(255,255,255,1)]">
+                  {servicio.titulo}
+                </p>
+                <p className="mx-3 text-justify font-mulish text-sm font-normal text-white">
+                  {servicio.texto}
+                </p>
+              </div>
             ) : (
-              <p className="font-sourceSerif text-lg font-normal text-white">
+              <p className="font-sourceSerif text-lg font-normal text-white drop-shadow-[0_0_10px_rgba(255,255,255,1)]">
                 {servicio.titulo}
               </p>
             )}

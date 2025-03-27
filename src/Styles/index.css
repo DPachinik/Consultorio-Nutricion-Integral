@@ -2,3 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    summary {
+      list-style: none;
+    }
+    summary::-webkit-details-marker {
+      display: none; /* Oculta el icono desplegable en navegadores WebKit */
+    
+    }
+    details {
+      padding: 0;
+      margin:0;
+    }
+  }
+  details[open] summary::after {
+    content: "▲"; /* Ícono cuando está abierto */
+  }
+  
+  summary::after {
+    content: "▼"; /* Ícono cuando está cerrado */
+    margin-left: 8px;
+  }

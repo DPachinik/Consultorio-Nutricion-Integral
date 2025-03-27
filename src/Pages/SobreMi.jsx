@@ -15,7 +15,7 @@ const SobreMi = () => {
   };
 
   return (
-    <div className="">
+    <div className="bg-back/50">
       <div className="flex h-[640px] w-full grid-cols-2 flex-col bg-encabezado bg-cover bg-bottom bg-no-repeat pt-[50px] md:grid md:bg-encabezadomd lg:h-[620px]">
         <div className="text-md hidden flex-col items-center justify-start gap-3 text-center font-bold md:flex">
           <div className="flex w-full justify-start pt-4">
@@ -30,7 +30,7 @@ const SobreMi = () => {
             <p className="font-sourceSerif text-lg font-bold italic tracking-wide md:text-2xl lg:text-3xl">
               CONSTRUYE TU <span className="text-carmesi"> MEJOR VERSIÓN</span>
             </p>
-            <p className="mt-4 text-sm font-normal text-primario md:text-lg lg:text-xl">
+            <p className="mt-4 font-mulish text-sm font-semibold text-primario md:text-lg lg:text-xl">
               Trabajemos juntos para desbloquear tu máximo potencial con planes
               de nutrición personalizados, asesoría experta y cambios de estilo
               de vida adaptados a tus necesidades.
@@ -76,8 +76,8 @@ const SobreMi = () => {
         />
       </div>
 
-      <div className="my-16 flex px-3">
-        <p className="text-center font-sourceSerif text-lg leading-[2] text-primario md:text-xl lg:text-2xl">
+      <div className="my-12 flex px-3">
+        <p className="text-center font-mulish text-lg font-semibold leading-[2] text-primario md:text-xl">
           “Apasionada por promover un estilo de vida saludable, me dedico a
           encontrar soluciones personalizadas para cada paciente, ayudándolos a
           alcanzar una mejor calidad de vida y fortalecer su autoestima.”
@@ -87,7 +87,7 @@ const SobreMi = () => {
       <BotonConsulta />
 
       <div>
-        <h2 className="my-12 flex justify-center font-sourceSerif text-3xl font-medium text-carmesi">
+        <h2 className="mb-8 mt-12 flex justify-center font-sourceSerif text-3xl font-medium text-carmesi">
           ¿ SOY ?
         </h2>
       </div>
@@ -95,7 +95,7 @@ const SobreMi = () => {
       <Tarjetas />
 
       <div className="flex items-end justify-center">
-        <h2 className="my-12 flex font-sourceSerif text-3xl font-medium text-carmesi">
+        <h2 className="mt-10 flex font-sourceSerif text-3xl font-medium text-carmesi">
           ¿CÓMO PUEDO AYUDARTE?
         </h2>
       </div>
@@ -103,7 +103,7 @@ const SobreMi = () => {
       <Carousel slides={SlidesCard1} />
 
       <div className="flex items-end justify-center">
-        <h2 className="my-12 flex font-sourceSerif text-3xl font-medium text-carmesi">
+        <h2 className="mt-12 flex font-sourceSerif text-3xl font-medium text-carmesi">
           ¿ME COMPROMETO A?
         </h2>
       </div>
@@ -120,7 +120,7 @@ const SobreMi = () => {
         ].map((text, index) => (
           <div
             key={index}
-            className={`mt-3 flex h-[50px] flex-row items-center gap-2 bg-white p-4 lg:h-[80px] lg:text-lg ${index % 2 === 0 ? 'mr-7 items-end justify-end rounded-r-full border-l-0 bg-gradient-to-r from-slate-400 via-slate-800 to-slate-800 text-end text-white shadow-md shadow-slate-500 lg:mr-[300px]' : 'ml-7 rounded-l-full border-r-0 bg-gradient-to-r from-lime-200 via-lime-500 to-fondo text-primario shadow-md shadow-fondo lg:ml-[300px]'} `}
+            className={`lg:text-md mt-3 flex h-[50px] flex-row items-center gap-2 bg-white p-4 ${index % 2 === 0 ? 'mr-7 items-end justify-end rounded-r-full border-l-0 bg-gradient-to-r from-slate-400 via-slate-800 to-slate-800 text-end text-white shadow-md shadow-slate-500 lg:mr-[300px]' : 'ml-7 rounded-l-full border-r-0 bg-gradient-to-r from-lime-200 via-lime-500 to-fondo text-primario shadow-md shadow-fondo lg:ml-[300px]'} `}
           >
             <GiCheckMark
               className={`shrink-0 rounded-full text-[22px] text-lime-400 ${index % 2 === 0 ? 'order-2' : 'order-1 text-slate-700'}`}

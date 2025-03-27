@@ -26,16 +26,16 @@ const Carousel = ({ slides }) => {
   }, []);
 
   return (
-    <div className="flex w-full flex-col items-center justify-center gap-8 p-8">
+    <div className="flex w-full flex-col items-center justify-center p-8">
       <motion.div
         whileTap={{ cursor: 'grabbing' }}
-        className="flex h-[380px] w-[440px] cursor-grab overflow-hidden md:w-[640px] lg:w-[950px]"
+        className="mb-8 flex h-[380px] w-[440px] cursor-grab overflow-hidden md:w-[640px] lg:w-[950px]"
         ref={carrosel}
       >
         <motion.div
           ref={animacion}
           drag="x"
-          className="mx-4 flex gap-6"
+          className="mx-4 flex gap-10"
           dragConstraints={{ right: 0, left: -width }}
           initial={{ x: 200 }}
           animate={enVentana ? { x: 0 } : {}}
@@ -44,25 +44,33 @@ const Carousel = ({ slides }) => {
           {slides.map((elementos, index) => (
             <motion.div
               key={index}
-              className={`flex ${imagenes ? 'h-[350px]' : 'h-[380px]'} w-[300px] flex-col items-center gap-3 rounded-xl bg-gradient-to-t from-slate-500 via-slate-700 to-slate-400 text-justify text-white lg:w-[420px]`}
+              className={`flex ${imagenes ? 'min-h-[150px]' : 'min-h-[380px]'} w-[300px] flex-col items-center gap-3 rounded-xl bg-gradient-to-b from-white via-subtitulo to-subtitulo text-justify text-white shadow-xl shadow-subtitulo`}
             >
               <img
                 src={elementos.imagen}
                 alt={elementos.titulo}
-                className={`pointer-events-none w-full rounded-t-lg object-cover shadow-inner shadow-black ${imagenes ? 'h-[150px]' : 'h-full rounded-lg object-fill object-bottom'}`}
+                className={`pointer-events-none w-full rounded-t-lg object-cover object-center shadow-inner shadow-black ${imagenes ? 'h-[150px]' : 'h-[340px] object-top'}`}
               />
               {elementos.parrafo1 && (
-                <div className="text-justify">
-                  <h3 className="pl-4 font-sourceSerif text-xl font-semibold text-lime-500">
+                <div className="text-justify font-mulish font-normal">
+                  <h3 className="mb-2 text-center font-sourceSerif text-xl text-lime-500">
                     {elementos.titulo}
                   </h3>
-                  <p className="px-4 text-sm lg:text-lg">
+                  <p className="lg:text-md px-4 text-sm">
                     {elementos.parrafo1}
                   </p>
-                  <p className="px-4 text-sm lg:text-lg">
+                  <p className="lg:text-md px-4 text-sm">
                     {elementos.parrafo2}
                   </p>
                 </div>
+              )}
+              {elementos.inicial ? (
+                <div className="flex w-full justify-between px-3 pb-3 font-mulish font-semibold">
+                  <p>{elementos.inicial}</p>
+                  <p className="text-lime-500">{elementos.final}</p>
+                </div>
+              ) : (
+                ''
               )}
             </motion.div>
           ))}

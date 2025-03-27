@@ -13,6 +13,9 @@ export default {
         encabezadomd:"url('/verdes.svg')",
         pie:"url('/fondo2.svg')",
         conectividad:"url('./src/assets/conectividad.png')",
+        columna:"url('./src/assets/columna.png')",
+        
+
         
 
 
@@ -30,7 +33,8 @@ export default {
         carmesi: "#A63F51",
         primario:'#474747',
         fondo:'#90CA3E',
-        subtitulo:'#475569'
+        subtitulo:'#475569',
+        back:'#F5F5F5'
       },
         textStrokeWidth: {
           1: '1px',
@@ -39,7 +43,10 @@ export default {
         textStrokeColor: {
           white: '#ffffff',
           black: '#000000',
-        }
+        },
+        textShadow: {
+          glow: "0 0 10px rgba(255, 255, 255, 0.8)",
+        },
     },
   },
   

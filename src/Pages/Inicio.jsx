@@ -10,7 +10,7 @@ const Inicio = () => {
   };
 
   return (
-    <section className="relative flex h-full w-full flex-col bg-body/5 pt-[50px] md:flex-row md:overflow-hidden md:pt-0">
+    <section className="relative flex h-full w-full flex-col bg-back/50 pt-[50px] md:flex-row md:overflow-hidden md:pt-0">
       <div className="flex flex-col md:hidden">
         <div className="h-[150px] w-full place-items-center pt-6 font-sourceSerif font-semibold italic leading-[0.5]">
           <p className="w-full pl-4 text-left text-3xl text-carmesi">
