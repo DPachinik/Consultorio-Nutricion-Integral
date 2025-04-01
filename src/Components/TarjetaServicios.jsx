@@ -67,7 +67,7 @@ const TarjetaServicios = () => {
   };
 
   return (
-    <div className="flex flex-col items-center gap-4 md:mx-4 md:grid md:grid-cols-2 md:place-items-center lg:grid-cols-3 lg:gap-8">
+    <div className="mb-12 flex flex-col items-center gap-4 md:mx-4 md:grid md:grid-cols-2 md:place-items-center lg:grid-cols-3 lg:gap-8">
       {servicios.map((servicio, index) => (
         <div
           key={index}

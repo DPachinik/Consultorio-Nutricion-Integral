@@ -108,7 +108,7 @@ const SobreMi = () => {
         </h2>
       </div>
 
-      <div className="mb-4 mt-4 flex w-full flex-col gap-5 bg-cover font-mulish text-sm">
+      <div className="mb-12 mt-4 flex w-full flex-col gap-5 bg-cover font-mulish text-sm">
         {[
           'Guiarte hacia una alimentación equilibrada y saludable.',
           'Brindarte un plan nutricional personalizado.',

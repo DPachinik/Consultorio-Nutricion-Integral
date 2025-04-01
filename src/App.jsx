@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Inicio from './Pages/Inicio';
 import SobreMi from './Pages/SobreMi';
 import Consultoria from './Pages/Consultoria';
+import Contacto from './Pages/Contacto';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,6 +20,7 @@ function App() {
             path="/Consultoria"
             element={<Consultoria menuOpen={menuOpen} />}
           />
+          <Route path="/Contacto" element={<Contacto />} />
         </Routes>
       </Router>
     </div>
