@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser';
 
 const Contacto = () => {
   const placeholderStyle =
-    'flex  h-[50px] w-full pl-4   items-center placeholder-black/70 placeholder:font-mulish placeholder:text-lg rounded-md border-[1px] border-subtitulo/30';
+    'flex  h-[50px] w-full pl-4   items-center placeholder-black/70 placeholder:font-mulish placeholder:text-lg rounded-md outline-none  border-subtitulo/30  border-[1px] focus:border-carmesi';
 
   const [nombre, setNombre] = useState('');
   const [apellido, setApellido] = useState('');
@@ -48,10 +48,10 @@ const Contacto = () => {
 
   return (
     <div className="flex min-h-screen flex-col justify-between bg-back pt-[50px]">
-      <div className="flex h-[calc(100vh-200px)] w-full flex-col px-4 lg:flex-row lg:items-center lg:justify-center">
+      <div className="h- flex w-full flex-col px-4 lg:flex-row lg:items-center lg:justify-center">
         <div className="my-8 flex w-full flex-col items-center gap-2 font-sourceSerif text-carmesi lg:justify-center">
           <h2 className="text-2xl lg:text-3xl">CONTACTAME</h2>
-          <p className="text-center text-lg lg:text-xl">
+          <p className="text-center text-lg lg:text-2xl">
             ¡Completa tus datos y dime como puedo ayudarte!
           </p>
         </div>
@@ -102,7 +102,7 @@ const Contacto = () => {
           />
           <textarea
             placeholder="Mensaje"
-            className="flex h-[70px] w-full items-center rounded-md border-[1px] border-subtitulo/20 pl-4 placeholder-black/70 placeholder:font-mulish placeholder:text-lg"
+            className="flex h-[70px] w-full items-center rounded-md border-[1px] border-subtitulo/30 pl-4 placeholder-black/70 outline-none placeholder:font-mulish placeholder:text-lg focus:border-carmesi"
             aria-label="Mensaje"
             required
             onChange={(e) => setMensaje(e.target.value)}

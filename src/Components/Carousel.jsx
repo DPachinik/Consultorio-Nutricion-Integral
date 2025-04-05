@@ -4,16 +4,6 @@ import BotonConsulta from './BotonConsulta';
 import PropTypes from 'prop-types';
 
 const Carousel = ({ slides }) => {
-  Carousel.propTypes = {
-    slides: PropTypes.arrayOf(
-      PropTypes.shape({
-        imagen: PropTypes.string.isRequired,
-        titulo: PropTypes.string.isRequired,
-        parrafo1: PropTypes.string.isRequired,
-        parrafo2: PropTypes.string,
-      })
-    ).isRequired,
-  };
   const imagenes = slides.every((slide) => slide.parrafo1);
   const carrosel = useRef();
   const [width, setWidth] = useState(0);
@@ -29,13 +19,13 @@ const Carousel = ({ slides }) => {
     <div className="flex w-full flex-col items-center justify-center p-8">
       <motion.div
         whileTap={{ cursor: 'grabbing' }}
-        className="mb-8 flex h-[380px] w-[440px] cursor-grab overflow-hidden md:w-[640px] lg:w-[950px]"
+        className="mb-8 flex h-[380px] w-full max-w-[360px] cursor-grab overflow-hidden md:max-w-[640px] lg:max-w-[950px]"
         ref={carrosel}
       >
         <motion.div
           ref={animacion}
           drag="x"
-          className="mx-4 flex gap-10"
+          className="mx-3 flex gap-10"
           dragConstraints={{ right: 0, left: -width }}
           initial={{ x: 200 }}
           animate={enVentana ? { x: 0 } : {}}
@@ -44,7 +34,7 @@ const Carousel = ({ slides }) => {
           {slides.map((elementos, index) => (
             <motion.div
               key={index}
-              className={`flex ${imagenes ? 'min-h-[150px]' : 'min-h-[380px]'} w-[300px] flex-col items-center gap-3 rounded-xl bg-gradient-to-b from-white via-subtitulo to-subtitulo text-justify text-white shadow-xl shadow-subtitulo`}
+              className={`flex ${imagenes ? 'min-h-[150px]' : 'min-h-[380px]'} min-w-[290px] max-w-[300px] flex-col items-center gap-3 rounded-xl bg-gradient-to-b from-white via-subtitulo to-subtitulo text-justify text-white shadow-xl shadow-subtitulo`}
             >
               <img
                 src={elementos.imagen}
@@ -82,3 +72,14 @@ const Carousel = ({ slides }) => {
 };
 
 export default Carousel;
+
+Carousel.propTypes = {
+  slides: PropTypes.arrayOf(
+    PropTypes.shape({
+      imagen: PropTypes.string.isRequired,
+      titulo: PropTypes.string,
+      parrafo1: PropTypes.string,
+      parrafo2: PropTypes.string,
+    })
+  ).isRequired,
+};

@@ -7,7 +7,7 @@
       list-style: none;
     }
     summary::-webkit-details-marker {
-      display: none; /* Oculta el icono desplegable en navegadores WebKit */
+      display: none; 
     
     }
     details {
@@ -16,10 +16,10 @@
     }
   }
   details[open] summary::after {
-    content: "▲"; /* Ícono cuando está abierto */
+    content: "▲"; 
   }
   
   summary::after {
-    content: "▼"; /* Ícono cuando está cerrado */
+    content: "▼"; 
     margin-left: 8px;
   }

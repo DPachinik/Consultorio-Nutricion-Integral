@@ -9,12 +9,7 @@ const mobileItemsClases =
 const desktopItemnsClases =
   'flex font-mulish font-semibold hover:border-b-[1px] hover:border-carmesi hover:text-carmesi   items-center md:text-center  lg:text-md text-sm';
 
-const Navbar = ({ menuOpen, setMenuOpen }) => {
-  Navbar.propTypes = {
-    menuOpen: PropTypes.bool.isRequired,
-    setMenuOpen: PropTypes.func.isRequired,
-  };
-
+const Navbar = ({ menuOpen, setMenuOpen, enlaces }) => {
   useEffect(() => {
     if (window.innerWidth < 768) {
       if (menuOpen) {
@@ -43,47 +38,22 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
           <p className="font-mulish font-semibold">Lic. Jessica Pachinik</p>
         </div>
         <div
-          className={`Navbar-items absolute left-[0] top-[50px] flex h-[600px] w-full flex-col items-center justify-center border-b-[0.5px] border-black bg-white font-lora font-normal italic text-carmesi ${menuOpen ? 'opacity-100' : 'pointer-events-none opacity-0'} transition-opacity duration-1000 ease-in-out md:hidden`}
+          className={`Navbar-items absolute left-[0] top-[50px] flex h-[600px] w-full flex-col items-center justify-center border-b-[0.5px] border-black bg-white font-mulish font-normal italic text-carmesi ${menuOpen ? 'opacity-100' : 'pointer-events-none opacity-0'} transition-opacity duration-1000 ease-in-out md:hidden`}
         >
           <ul
             className="flex w-full flex-col items-center justify-center gap-[30px] py-[65px]"
             role="menu"
           >
-            <li
-              className={mobileItemsClases}
-              onClick={HandleItemClick}
-              role="menuitem"
-            >
-              <NavLink to={'/'}>Inicio</NavLink>
-            </li>
-            <li
-              className={mobileItemsClases}
-              onClick={HandleItemClick}
-              role="menuitem"
-            >
-              <NavLink to={'/SobreMi'}>Sobre Mi</NavLink>
-            </li>
-            <li
-              className={mobileItemsClases}
-              onClick={HandleItemClick}
-              role="menuitem"
-            >
-              <NavLink to={'/'}>Consultoria Nutricional</NavLink>
-            </li>
-            <li
-              className={mobileItemsClases}
-              onClick={HandleItemClick}
-              role="menuitem"
-            >
-              <NavLink to={'/'}>Contacto</NavLink>
-            </li>
-            <li
-              className={mobileItemsClases}
-              onClick={HandleItemClick}
-              role="menuitem"
-            >
-              <NavLink to={'/'}>Tienda</NavLink>
-            </li>
+            {enlaces.map((enlace, index) => (
+              <li
+                key={index}
+                className={mobileItemsClases}
+                onClick={HandleItemClick}
+                role="menuitem"
+              >
+                <NavLink to={`/${enlace.para}`}>{enlace.texto}</NavLink>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -108,85 +78,45 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
             className="md:flex md:w-full md:items-center md:justify-end md:gap-[30px]"
             role="menu"
           >
-            <li
-              className={desktopItemnsClases}
-              onClick={HandleItemClick}
-              role="menuitem"
-            >
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  isActive ? 'border-b-[0.5px] border-carmesi text-carmesi' : ''
-                }
+            {enlaces.map((enlace, index) => (
+              <li
+                key={index}
+                className={desktopItemnsClases}
+                onClick={HandleItemClick}
+                role="menuitem"
               >
-                Inicio
-              </NavLink>
-            </li>
-            <li
-              className={desktopItemnsClases}
-              onClick={HandleItemClick}
-              role="menuitem"
-            >
-              <NavLink
-                to="/SobreMi"
-                className={({ isActive }) =>
-                  isActive ? 'border-b-[0.5px] border-carmesi text-carmesi' : ''
-                }
-              >
-                Sobre Mi
-              </NavLink>
-            </li>
-            <li
-              className={desktopItemnsClases}
-              onClick={HandleItemClick}
-              role="menuitem"
-            >
-              <NavLink
-                to={'/Consultoria'}
-                className={({ isActive }) =>
-                  isActive ? 'border-b-[0.5px] border-carmesi text-carmesi' : ''
-                }
-              >
-                Consultoria Nutricional
-              </NavLink>
-            </li>
-            <li
-              className={desktopItemnsClases}
-              onClick={HandleItemClick}
-              role="menuitem"
-            >
-              <NavLink
-                to={'/Contacto'}
-                className={({ isActive }) =>
-                  isActive ? 'border-b-[0.5px] border-carmesi text-carmesi' : ''
-                }
-              >
-                Contacto
-              </NavLink>
-            </li>
-            <li
-              className={desktopItemnsClases}
-              onClick={HandleItemClick}
-              role="menuitem"
-            >
-              <NavLink
-                to={'/Tienda'}
-                className={({ isActive }) =>
-                  isActive ? 'border-b-[0.5px] border-carmesi text-carmesi' : ''
-                }
-              >
-                Tienda
-              </NavLink>
-            </li>
+                <NavLink
+                  to={`/${enlace.para}`}
+                  className={({ isActive }) =>
+                    isActive
+                      ? 'border-b-[0.5px] border-carmesi text-carmesi'
+                      : ''
+                  }
+                >
+                  {enlace.texto}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </div>
       </nav>
-
       <div
-        className={`fixed inset-0 left-0 top-[650px] z-10 bg-black/35 ${menuOpen ? '' : 'hidden'} `}
+        className={`fixed inset-0 left-0 top-[650px] z-10 bg-black/35 ${menuOpen ? '' : 'hidden'} ${menuOpen ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'} transition-opacity duration-1000 ease-in-out`}
+        onClick={HandleCloseClick}
       />
     </div>
   );
 };
 
 export default Navbar;
+
+Navbar.propTypes = {
+  menuOpen: PropTypes.bool.isRequired,
+  setMenuOpen: PropTypes.func.isRequired,
+  enlaces: PropTypes.arrayOf(
+    PropTypes.shape({
+      texto: PropTypes.string.isRequired,
+      para: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
