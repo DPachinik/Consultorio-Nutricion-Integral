@@ -22,7 +22,7 @@ export const DatosTarjeta = [
     {
       imagen: Ice,
       numero: '3°',
-      titulo: 'TÉCNICA EN INSPECCIÓN DE ALIMENTOS ',
+      titulo: 'TÉCNICA DE ALIMENTOS ',
       parrafo1:
         'Soy Técnica en Inspección de Alimentos e Inocuidad, con formación especializada en control de calidad y seguridad alimentaria. Capacitada para garantizar el cumplimiento de normativas sanitarias y asegurar la calidad e inocuidad de los alimentos a lo largo de toda la cadena de producción.',
     },
@@ -36,7 +36,7 @@ export const DatosTarjeta = [
     {
       imagen: Mix,
       numero: '5°',
-      titulo: 'EMPRENDEDORA EN ALIMENTACIÓN SALUDABLE',
+      titulo: 'EMPRENDEDORA WELLNESS',
       parrafo1:
         'Además de asesorar a mis pacientes, desarrollo y elaboro productos nutricionalmente equilibrados, como snacks saludables, mix de frutas deshidratadas y granos, para fomentar una alimentación práctica y consciente.',
     },

@@ -3,29 +3,28 @@ import PropTypes from 'prop-types';
 const Tarjetas = ({ tarjetas }) => {
   const classMap = {
     0: '',
-    1: 'lg:ml-auto',
+    1: 'md:ml-auto',
     2: '',
-    3: 'lg:ml-auto',
+    3: 'md:ml-auto',
   };
 
   return (
-    <div className="flex flex-col bg-cover bg-center lg:bg-pie">
+    <div className="container mx-auto flex flex-col space-y-14">
       {tarjetas.map((tarjeta, index) => (
         <div
           key={index}
-          className={`mx-3 mb-8 grid h-[380px] grid-cols-2 rounded-2xl border-[1px] border-lime-700 bg-gradient-to-t from-fondo via-lime-100 to-lime-50 font-mulish text-sm shadow-inner md:h-[250px] lg:w-[760px] ${index % 2 === 0 ? 'clip-tl-45' : 'clip-tr-45'} ${classMap[index] || ''} `}
+          className={`relative mx-4 flex h-auto w-fit flex-row rounded-2xl border-[1px] border-lima bg-gradient-to-t from-lime-500 via-lime-100 to-white p-4 font-mulish text-sm shadow-md shadow-primario md:mx-10 md:max-w-[80%] lg:max-w-[50%] ${classMap[index] || ''} `}
         >
           <div
-            className={`flex h-full w-full rounded-2xl bg-cover bg-center bg-no-repeat ${index % 2 === 0 ? 'order-1' : 'order-2'}`}
+            className={`absolute -top-8 left-2 flex h-24 w-24 rounded-full bg-cover bg-center bg-no-repeat shadow-md shadow-primario`}
             style={{ backgroundImage: `url(${tarjeta.imagen})` }}
           ></div>
-          <div
-            className={`flex flex-col py-2 md:pt-8 lg:pt-2 ${index % 2 === 0 ? 'order-2' : 'order-1'}`}
-          >
-            <h3 className="pl-4 font-sourceSerif font-semibold text-subtitulo sm:text-sm md:text-xl md:font-bold">
+
+          <div className="flex h-full w-full flex-col space-y-6 py-2 pl-8 md:space-y-10">
+            <h3 className="w-full pr-2 text-right font-lora text-lg font-medium text-rose-800 md:pr-6">
               {tarjeta.titulo}
             </h3>
-            <p className="md:text-md lg:text-md px-4 pt-2 text-sm font-medium tracking-tight text-primario">
+            <p className="text-md pt-2 font-mulish font-medium tracking-tight text-primario">
               {tarjeta.parrafo1}
             </p>
           </div>
