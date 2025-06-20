@@ -13,7 +13,7 @@ const Tarjetas = ({ tarjetas }) => {
       {tarjetas.map((tarjeta, index) => (
         <div
           key={index}
-          className={`relative mx-4 flex h-auto w-fit flex-row rounded-2xl border-[1px] border-lima bg-gradient-to-t from-lime-500 via-lime-100 to-white p-4 font-mulish text-sm shadow-md shadow-primario md:mx-10 md:max-w-[80%] lg:max-w-[50%] ${classMap[index] || ''} `}
+          className={`relative mx-4 flex h-auto w-fit flex-row rounded-2xl border-[1px] border-lima bg-gradient-to-t from-lime-200 via-lime-50 to-white p-4 font-mulish text-sm shadow-md shadow-primario md:mx-10 md:max-w-[80%] lg:max-w-[50%] ${classMap[index] || ''} `}
         >
           <div
             className={`absolute -top-8 left-2 flex h-24 w-24 rounded-full bg-cover bg-center bg-no-repeat shadow-md shadow-primario`}

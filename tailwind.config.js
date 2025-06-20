@@ -14,10 +14,7 @@ export default {
         pie:"url('/fondo2.svg')",
         conectividad:"url('./src/assets/conectividad.png')",
         columna:"url('./src/assets/columna.png')",
-        
-
-        
-
+        mapa:"url('./src/assets/mapa.png')"
 
       },
       fontFamily: {

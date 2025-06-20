@@ -1,11 +1,14 @@
  export const etapasDeConsulta = [
     {
-      titulo: '1° CONSULTA PREVIA',
+      titulo: 'CONSULTA PREVIA',
+      orden:'1°',
       parrafo1:
         'Agenda tu cita por WhatsApp eligiendo el día y la hora que mejor se adapten a tu disponibilidad.',
-    },
+      parrafo2:'Estoy disponible para ayudarte cuando más lo necesites.'
+      },
     {
-      titulo: '2° CONSULTA Y EVALUACIÓN',
+      titulo: 'CONSULTA Y EVALUACIÓN',
+      orden:'2°',
       parrafo1:
         'En la consulta, hablaremos sobre tus objetivos, historial dietético, uso de suplementos, hábitos alimenticios y tu experiencia con el ejercicio físico.',
       parrafo2:
@@ -17,10 +20,11 @@
       ],
     },
     {
-      titulo: '3° ACOMPAÑAMIENTO',
+      titulo: 'ACOMPAÑAMIENTO',
+      orden:'3°',
       parrafo1:
-        'Después de enviarte tu plan de alimentación con todas las indicaciones necesarias, tendrás acceso a mi WhatsApp para hacer preguntas y compartir tus comentarios durante todo el tratamiento, sin límite de consultas.',
+        'Después de recibir tu plan, tendrás acceso ilimitado a mi WhatsApp para dudas y seguimiento durante el tratamiento.',
       parrafo2:
-        'Recibirás tu plan en un documento detallado que podrás revisar digitalmente o imprimir si lo deseas.',
+        'Recibirás tu plan en un documento detallado digitalmente.',
     },
   ];

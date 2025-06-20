@@ -24,7 +24,7 @@ const TarjetaServicios = ({ tratamientos }) => {
           key={index}
           onMouseEnter={() => handleMouseEnter(index)}
           onMouseLeave={() => handleMouseLeave(index)}
-          className={`relative flex h-[150px] w-[350px] items-center justify-center rounded-lg bg-cover bg-center transition-all duration-1000 hover:cursor-pointer lg:h-[200px] lg:w-[320px] ${description[index] ? 'h-[300px] lg:h-[250px] lg:w-[400px]' : ''}`}
+          className={`relative flex h-[150px] w-[350px] items-center justify-center rounded-lg bg-cover bg-center shadow-md shadow-primario transition-all duration-1000 hover:cursor-pointer lg:h-[200px] lg:w-[320px] ${description[index] ? 'h-[300px] lg:h-[250px] lg:w-[400px]' : ''}`}
           style={{ backgroundImage: `url(${servicio.imagen})` }}
         >
           <div
@@ -33,7 +33,7 @@ const TarjetaServicios = ({ tratamientos }) => {
 
           <div className="relative z-10 text-center">
             {description[index] ? (
-              <div>
+              <div className="mx-4 border-[1px] border-white bg-white/20 p-2">
                 <p className="font-sourceSerif text-lg font-normal text-white drop-shadow-[0_0_10px_rgba(255,255,255,1)]">
                   {servicio.titulo}
                 </p>

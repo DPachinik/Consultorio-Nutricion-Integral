@@ -1,22 +1,24 @@
-import { FaCheck } from 'react-icons/fa';
 import PropTypes from 'prop-types';
+import { GiCheckMark } from 'react-icons/gi';
 
 const Etapas = ({ etapas }) => {
   return (
-    <div className="relative flex flex-col items-center gap-4 px-3 lg:bg-columna lg:bg-contain lg:bg-center lg:bg-no-repeat lg:px-12">
+    <div className="container mx-auto flex flex-col items-center gap-4 px-3 md:flex-row">
       {etapas.map((etapa, index) => (
         <div
           key={index}
-          className={`mb-4 flex w-full flex-col ${index === 0 ? 'md:items-end' : ''} ${index === 1 ? 'md:items-start' : ''} ${index === 2 ? 'md:items-end' : ''} `}
+          className="relative mb-4 flex h-auto w-full flex-col rounded-xl border-[1px] border-lima bg-gradient-to-b from-white via-lime-50 to-lime-200 shadow-md shadow-primario"
         >
-          <details className="flex min-w-[300px] flex-col justify-center rounded-lg border-[1px] border-lime-500 bg-gradient-to-r from-lime-200 via-lime-100 to-lime-50 px-3 py-4 font-mulish text-primario md:w-[400px] lg:w-[450px]">
-            <summary className="flex h-[30px] w-full cursor-pointer items-center justify-between gap-12 px-3 font-sourceSerif text-lg font-semibold text-subtitulo md:text-xl">
+          <div className="flex h-full w-auto flex-col justify-start rounded-xl px-4 py-4 font-mulish text-sm text-primario">
+            <div className="text-md flex h-[30px] w-full items-center justify-center gap-12 px-3 py-4 text-center font-lora font-medium text-rose-800">
+              <div className="absolute -top-6 left-2 flex-shrink-0 rounded-full bg-white px-3 py-2 text-2xl text-lima shadow-md shadow-primario">
+                {etapa.orden}
+              </div>
               {etapa.titulo}
-            </summary>
-            <p className="font-semibold">{etapa.parrafo1}</p>
-            {etapa.parrafo2 && (
-              <p className="font-semibold">{etapa.parrafo2}</p>
-            )}
+            </div>
+
+            <p className="font-medium">{etapa.parrafo1}</p>
+            {etapa.parrafo2 && <p className="font-medium">{etapa.parrafo2}</p>}
             {etapa.lista && (
               <ul>
                 {etapa.lista.map((item, i) => (
@@ -24,13 +26,15 @@ const Etapas = ({ etapas }) => {
                     key={i}
                     className="ml-2 flex items-center gap-2 font-semibold"
                   >
-                    {<FaCheck className="flex h-4 w-4 flex-shrink-0" />}
+                    {
+                      <GiCheckMark className="flex h-4 w-4 flex-shrink-0 text-lima" />
+                    }
                     {item}
                   </li>
                 ))}
               </ul>
             )}
-          </details>
+          </div>
         </div>
       ))}
     </div>
