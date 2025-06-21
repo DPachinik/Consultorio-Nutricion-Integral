@@ -1,4 +1,4 @@
-import icono from '../assets/icono.png';
+import icono from '../assets/logo.png';
 import Pilares from '../Components/Pilares';
 import BotonWhastApp from '../Components/BotonWhastApp';
 
@@ -13,23 +13,23 @@ const HomeDesktop = () => {
         </div>
 
         <div className="flex w-full flex-col items-center justify-between bg-amber-50/5 px-8">
-          <div className="flex w-full flex-col pb-4 leading-[1.5]">
+          <div className="flex w-full flex-col pb-4 leading-[1.5] md:px-16">
             <p className="w-full bg-gradient-to-r from-rose-800 via-rose-700 to-rose-600 bg-clip-text pl-4 text-left font-lora text-[6vh] font-medium italic text-transparent">
               <span className="text-[8vh]">N</span>utrición{' '}
               <span className="text-[8vh]">I</span>ntegral
             </p>
 
-            <p className="w-full pr-12 text-right font-mulish text-lg italic text-primario">
+            <p className="w-full pr-12 text-right font-lora text-lg italic text-primario">
               estilo de vida saludable
             </p>
           </div>
 
-          <div className="relative flex h-[215px] w-[215px] flex-col rounded-full shadow-[0_0_20px_rgba(0,0,0,0.5)] ring-1 ring-gray-400 hover:shadow-lime-400">
-            <div className="absolute left-0 top-[20px] w-fit rounded-2xl bg-lima px-3 font-mulish text-[18px] text-white">
+          <div className="relative flex h-[200px] w-[200px] flex-col rounded-full shadow-[0_0_30px_rgba(0,0,0,0.6)] ring-1 ring-gray-400 hover:shadow-lima">
+            <div className="absolute -left-2 top-[20px] w-fit rounded-2xl bg-lima px-3 font-mulish text-[18px] text-white">
               + Resultados
             </div>
 
-            <div className="absolute left-10 top-10 w-fit rounded-2xl px-3 font-mulish text-[18px] text-white">
+            <div className="absolute left-8 top-8 w-fit rounded-2xl px-3 font-mulish text-[18px] text-white">
               <img src={icono} className="h-32 w-32" />
             </div>
 
