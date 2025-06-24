@@ -40,7 +40,7 @@ const Footer = () => {
         ))}
       </div>
 
-      <div className="text-md flex items-center justify-center gap-2">
+      <div className="text-md flex items-center justify-center gap-2 font-lora font-medium italic">
         <FaRegCopyright />
         <p> 2024 All Rights Reserved</p>
       </div>

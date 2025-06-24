@@ -4,6 +4,7 @@ import Footer from '../Components/Footer';
 import Tarjetas from '../Components/Tarjetas';
 import BotonConsulta from '../Components/BotonConsulta';
 import Flecha from '../assets/flecha.png';
+import Flecha2 from '../assets/flecha2.png';
 import Nutri from '../assets/NutriJessy.png';
 import { SlidesCard1 } from '../Data/SlidesCard1';
 import BotonWhastApp from '../Components/BotonWhastApp';
@@ -17,10 +18,13 @@ const SobreMi = () => {
   };
 
   return (
-    <div className="relative bg-amber-50/10">
+    <div className="bg-amber-50/ relative overflow-x-hidden">
       <div className="flex min-h-[690px] w-full grid-cols-2 flex-col bg-encabezado bg-cover bg-bottom bg-no-repeat pt-[50px] md:grid md:min-h-[600px] md:bg-encabezadomd">
         <div className="text-md hidden flex-col items-center justify-start gap-3 text-center font-bold md:flex">
-          <div className="flex w-full justify-start pt-4">
+          <div
+            className="flex w-full justify-start pt-4"
+            data-aos="fade-down-right"
+          >
             <img
               src={Flecha}
               alt="imagen de una flecha"
@@ -39,16 +43,19 @@ const SobreMi = () => {
             </p>
           </div>
 
-          <div className="flex w-full rotate-180 pt-4">
+          <div className="flex pl-20" data-aos="fade-down-left">
             <img
-              src={Flecha}
+              src={Flecha2}
               alt="imagen de una flecha"
               className="h-[100px] w-[200px]"
             />
           </div>
         </div>
 
-        <div className="font-lg flex w-full flex-col items-center font-lora text-primario">
+        <div
+          className="font-lg flex w-full flex-col items-center font-lora text-primario"
+          data-aos="fade-up"
+        >
           <div className="flex items-start text-left text-[30px]">
             <p className="mx-auto pt-2 text-center md:hidden">
               CONSTRUYE TU <span className="text-rose-800">MEJOR VERSIÓN</span>{' '}
@@ -100,7 +107,7 @@ const SobreMi = () => {
 
       <div className="flex items-end justify-center">
         <h2 className="my-12 flex font-sourceSerif text-2xl font-medium text-rose-800">
-          ¿Me Comprometo A?
+          ¿Me Comprometo a?
         </h2>
       </div>
       <Compromiso propsCompromiso={DatosCompromiso} />

@@ -27,7 +27,7 @@ const Pilares = () => {
   ];
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col" data-aos="fade-up-left">
       {pilares.map((pilar) => (
         <div
           className="flex flex-col justify-between gap-6 p-2 pt-4 font-mulish md:gap-0"
@@ -38,7 +38,7 @@ const Pilares = () => {
               <em className="min-w-[16px] flex-shrink-0 pr-1 text-xs font-semibold">
                 {pilar.numero}
               </em>
-              <span className="ml- text-sm font-semibold">{pilar.titulo}</span>
+              <span className="text-sm font-semibold">{pilar.titulo}</span>
             </p>
             <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full text-lima shadow-md shadow-primario">
               {pilar.icono}

@@ -10,15 +10,21 @@ import Counter from '../Components/Counter';
 
 const Consultoria = () => {
   return (
-    <div className="bg-amber-50/10">
+    <div className="overflow-x-hidden bg-amber-50/10">
       <div className="mb-8 flex h-[750px] w-full grid-cols-2 flex-col bg-encabezado bg-cover bg-bottom bg-no-repeat pt-[50px] md:grid md:h-[640px] md:bg-encabezadomd">
         <h2 className="mx-auto my-6 justify-center text-center font-lora text-2xl font-medium text-rose-800 md:col-span-2">
           ¿Consultas Online?
         </h2>
 
-        <div className="mx-auto flex h-[320px] w-[320px] bg-conectividad bg-cover bg-top md:h-[400px] md:w-[400px]" />
+        <div
+          className="mx-auto flex h-[320px] w-[320px] bg-conectividad bg-cover bg-top md:h-[400px] md:w-[400px]"
+          data-aos="fade-down-right"
+        />
 
-        <div className="flex flex-col md:items-center md:gap-6 lg:mx-8 lg:gap-10">
+        <div
+          className="flex flex-col md:items-center md:gap-6 lg:mx-8 lg:gap-10"
+          data-aos="fade-down-left"
+        >
           <p className="mx-3 pb-2 text-center font-lora text-lg font-medium italic text-rose-800 md:text-xl">
             ¡Si, Consultas
             <span className="text-2xl font-bold"> 100% ONLINE</span> Desde

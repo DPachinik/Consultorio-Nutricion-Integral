@@ -8,6 +8,9 @@ const Etapas = ({ etapas }) => {
         <div
           key={index}
           className="relative mb-4 flex h-auto w-full flex-col rounded-xl border-[1px] border-lima bg-gradient-to-b from-white via-lime-50 to-lime-200 shadow-md shadow-primario"
+          data-aos={index % 2 === 0 ? 'fade-down' : 'fade-up'}
+          data-aos-easing="linear"
+          data-aos-duration="1200"
         >
           <div className="flex h-full w-auto flex-col justify-start rounded-xl px-4 py-4 font-mulish text-sm text-primario">
             <div className="text-md flex h-[30px] w-full items-center justify-center gap-12 px-3 py-4 text-center font-lora font-medium text-rose-800">

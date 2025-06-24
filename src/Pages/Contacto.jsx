@@ -54,7 +54,13 @@ const Contacto = () => {
     <div className="flex h-[100dvh] flex-col bg-amber-50/0 pt-[50px] md:justify-between">
       <div className="container mx-auto flex h-full w-full flex-col px-4 md:flex-row md:items-center md:justify-center">
         <div className="flex h-auto w-full flex-col items-center font-lora font-medium text-rose-800 md:h-full md:justify-center md:gap-2 md:pb-20">
-          <img src={Logo} alt="Logotipo de manzana" className="h-24 w-24" />
+          <img
+            src={Logo}
+            alt="Logotipo de manzana"
+            className="h-24 w-24"
+            data-aos="fade-up"
+            data-aos-anchor-placement="bottom-center"
+          />
           <h2 className="text-xl lg:text-3xl">Contáctame</h2>
           <p className="text-md pb-4 text-center lg:text-2xl">
             ¡Completa tus datos y dime como puedo ayudarte!

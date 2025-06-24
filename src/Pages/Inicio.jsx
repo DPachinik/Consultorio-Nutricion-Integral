@@ -4,7 +4,7 @@ import HomeDesktop from '../Components/HomeDesktop';
 
 const Inicio = () => {
   return (
-    <section className="h-full w-full flex-col bg-amber-50/5 pt-[50px] md:flex-row md:overflow-hidden md:pt-0">
+    <section className="h-full w-full flex-col overflow-x-hidden bg-amber-50/5 pt-[50px] md:flex-row md:overflow-hidden md:pt-0">
       <HomeMobile />
       <HomeDesktop />
     </section>
