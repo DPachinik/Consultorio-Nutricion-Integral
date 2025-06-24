@@ -6,13 +6,18 @@ import Consultoria from './Pages/Consultoria';
 import Contacto from './Pages/Contacto';
 import { enlacesDeNavegacion } from './Data/EnlacesNavegacion';
 import Navbar from './Components/Navbar';
+import 'aos/dist/aos.css';
+import { AosInit } from './Components/AosInit';
+import { ScrollToTop } from './Components/ScrollTop';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className="h-screen">
+      <AosInit />
       <Router>
+        <ScrollToTop />
         <Navbar
           menuOpen={menuOpen}
           setMenuOpen={setMenuOpen}
