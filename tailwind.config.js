@@ -7,14 +7,13 @@ export default {
         'curva': '50% 50% 0 0'
       },
       backgroundImage: {
-        alimentos: "url('./src/assets/alimentos.jpg')",
+        alimentos: "url('/alimentos.jpg')",
         nutri:"url('./src/assets/NutriJessy.png')",
         encabezado:"url('/verde.svg')",
         encabezadomd:"url('/verdes.svg')",
         pie:"url('/fondo2.svg')",
-        conectividad:"url('./src/assets/conectividad.png')",
-        columna:"url('./src/assets/columna.png')",
-        mapa:"url('./src/assets/mapa.png')"
+        conectividad:"url('/conectividad.png')",
+
 
       },
       fontFamily: {
