@@ -17,7 +17,7 @@ const Tarjetas = ({ tarjetas }) => {
           data-aos={index % 2 === 0 ? 'fade-left' : 'fade-right'}
         >
           <div
-            className={`absolute -top-8 left-2 flex h-20 w-20 rounded-full bg-cover bg-center bg-no-repeat shadow-md shadow-primario`}
+            className={`absolute -top-8 left-2 flex h-16 w-16 rounded-full bg-cover bg-center bg-no-repeat shadow-md shadow-primario md:h-20 md:w-20`}
             style={{ backgroundImage: `url(${tarjeta.imagen})` }}
           ></div>
 
