@@ -31,7 +31,7 @@ const HomeDesktop = () => {
           </div>
 
           <div
-            className="relative flex h-[200px] w-[200px] flex-col rounded-full shadow-[0_0_30px_rgba(0,0,0,0.6)] ring-1 ring-gray-400 hover:shadow-lima"
+            className="relative flex h-[200px] w-[200px] flex-col rounded-full shadow-[0_0_40px_theme('colors.lime.600')] ring-1 ring-lima"
             data-aos="fade-left"
           >
             <div className="absolute -left-2 top-[20px] w-fit rounded-2xl bg-lima px-3 font-mulish text-[18px] text-white">

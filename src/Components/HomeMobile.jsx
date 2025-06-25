@@ -21,7 +21,7 @@ const HomeMobile = () => {
       </div>
 
       <div
-        className="relative flex h-[200px] min-h-[150px] w-[200px] min-w-[150px] flex-col rounded-full bg-alimentos bg-cover bg-center shadow-[0_0_40px_theme('colors.lime.600')] ring-1 ring-lima hover:shadow-lima"
+        className="relative flex h-[200px] min-h-[150px] w-[200px] min-w-[150px] flex-col rounded-full bg-alimentos bg-cover bg-center shadow-[0_0_40px_theme('colors.lime.600')] ring-1 ring-lima"
         data-aos="fade-left"
       >
         <div className="absolute -left-4 top-[30px] w-fit rounded-2xl bg-lima px-3 font-mulish text-[18px] text-white">
