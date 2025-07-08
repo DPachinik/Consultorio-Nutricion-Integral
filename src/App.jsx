@@ -9,6 +9,8 @@ import Navbar from './Components/Navbar';
 import 'aos/dist/aos.css';
 import { AosInit } from './Components/AosInit';
 import { ScrollToTop } from './Components/ScrollTop';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,6 +18,7 @@ function App() {
   return (
     <div className="h-screen">
       <AosInit />
+      <ToastContainer autoClose={2000} />
       <Router>
         <ScrollToTop />
         <Navbar

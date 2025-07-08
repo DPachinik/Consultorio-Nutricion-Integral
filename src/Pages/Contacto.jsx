@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Logo from '../assets/logo.png';
 import Footer from '../Components/Footer';
 import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
 
 const Contacto = () => {
   const placeholderStyle =
@@ -12,7 +13,6 @@ const Contacto = () => {
   const [numero, setNumero] = useState('');
   const [email, setEmail] = useState('');
   const [mensaje, setMensaje] = useState('');
-  const [respuesta, setRespuesta] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -34,15 +34,12 @@ const Contacto = () => {
       .then(
         (res) => {
           console.log('respuesta', res);
-          setRespuesta('Mensaje enviado con éxito!');
+          toast.success('Mensaje enviado con éxito !');
           setEmail('');
           setNombre('');
           setApellido('');
           setNumero('');
           setMensaje('');
-          setTimeout(() => {
-            setRespuesta('');
-          }, 4000);
         },
         (err) => {
           console.log('Error:', err);
@@ -127,9 +124,6 @@ const Contacto = () => {
           >
             Enviar
           </button>
-          <p className="text-center font-mulish font-bold text-rose-800">
-            {respuesta}
-          </p>
         </form>
       </div>
       <Footer />
