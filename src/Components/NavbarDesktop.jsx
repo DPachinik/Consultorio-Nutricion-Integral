@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import Logo from '../assets/logo.png';
+import Logo from '../assets/logo.webp';
 
 const NavbarDesktop = ({ setMenuOpen, enlaces }) => {
   const HandleItemClick = () => {
@@ -13,7 +13,7 @@ const NavbarDesktop = ({ setMenuOpen, enlaces }) => {
         <div className="flex min-w-max select-none items-center gap-2">
           <img src={Logo} className="h-12 w-12" />
 
-          <p className="text-md w-full font-sourceSerif font-medium italic text-rose-800">
+          <p className="text-md w-full font-lora font-medium italic text-rose-800">
             Nut. Jessica Pachinik
           </p>
         </div>

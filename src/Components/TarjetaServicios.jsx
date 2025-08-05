@@ -42,7 +42,7 @@ const TarjetaServicios = ({ tratamientos }) => {
                   >
                     <FiX size={26} color="#fff" />
                   </div>
-                  <p className="mb-4 px-4 font-sourceSerif text-lg font-normal text-white drop-shadow-[0_0_15px_rgba(255,255,255,1)]">
+                  <p className="mb-4 px-4 font-lora text-lg font-normal text-white drop-shadow-[0_0_15px_rgba(255,255,255,1)]">
                     {servicio.titulo}
                   </p>
                   <p className="mx-3 text-justify font-mulish text-sm font-normal text-white">
@@ -52,7 +52,7 @@ const TarjetaServicios = ({ tratamientos }) => {
               </div>
             ) : (
               <div className="relative flex h-full w-full flex-col items-center justify-center">
-                <p className="text-center font-sourceSerif text-lg font-normal text-white drop-shadow-[0_0_10px_rgba(255,255,255,1)]">
+                <p className="text-md px-2 text-center font-lora font-normal text-white drop-shadow-[0_0_10px_rgba(255,255,255,1)]">
                   {servicio.titulo}
                 </p>
                 <button

@@ -1,5 +1,5 @@
 import Pilares from '../Components/Pilares';
-import Logo from '../assets/logo.png';
+import Logo from '../assets/logo.webp';
 import BotonWhastApp from '../Components/BotonWhastApp';
 
 const HomeMobile = () => {

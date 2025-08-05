@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Logo from '../assets/logo.png';
+import Logo from '../assets/logo.webp';
 import Footer from '../Components/Footer';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';

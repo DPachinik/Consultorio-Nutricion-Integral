@@ -1,4 +1,4 @@
-import icono from '../assets/logo.png';
+import icono from '../assets/logo.webp';
 import Pilares from '../Components/Pilares';
 import BotonWhastApp from '../Components/BotonWhastApp';
 
