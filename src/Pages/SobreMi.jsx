@@ -100,7 +100,7 @@ const SobreMi = () => {
       <Tarjetas tarjetas={DatosTarjeta} />
 
       <div className="flex items-end justify-center">
-        <h2 className="mb-8 mt-20 flex text-center font-sourceSerif text-2xl font-medium text-rose-800">
+        <h2 className="mb-8 mt-20 flex text-center font-lora text-2xl font-medium text-rose-800">
           ¿Cómo Puedo Ayudarte?
         </h2>
       </div>
@@ -108,7 +108,7 @@ const SobreMi = () => {
       <Carousel slides={SlidesCard1} />
 
       <div className="flex items-end justify-center">
-        <h2 className="mb-8 mt-20 flex font-sourceSerif text-2xl font-medium text-rose-800">
+        <h2 className="mb-8 mt-20 flex font-lora text-2xl font-medium text-rose-800">
           ¿Me Comprometo a?
         </h2>
       </div>

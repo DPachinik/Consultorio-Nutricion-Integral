@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { NavLink } from 'react-router-dom';
 import { useEffect } from 'react';
-import Logo from '../assets/logo.png';
+import Logo from '../assets/logo.webp';
 
 const NavbarMobile = ({ menuOpen, setMenuOpen, enlaces }) => {
   useEffect(() => {

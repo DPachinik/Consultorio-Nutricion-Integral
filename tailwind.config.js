@@ -8,10 +8,8 @@ export default {
       },
       backgroundImage: {
         alimentos: "url('/alimentos.jpg')",
-        nutri:"url('./src/assets/NutriJessy.png')",
         encabezado:"url('/verde.svg')",
         encabezadomd:"url('/verdes.svg')",
-        pie:"url('/fondo2.svg')",
         conectividad:"url('/conectividad.png')",
 
 
@@ -19,8 +17,7 @@ export default {
       fontFamily: {
         lora: ["Lora", "sans-serif"],
         mulish:['Mulish', 'sans-serif'],
-        cormorant: ['Cormorant Garamond', 'serif'],
-        sourceSerif: ["'Source Serif 4'", "serif"],
+
       },
       colors: {
         body: "#9EA79E",
@@ -46,27 +43,5 @@ export default {
     },
   },
   
-  plugins: [
-    function ({ addUtilities }) {
-      addUtilities({
-        ".clip-tl-45": {
-          clipPath: "polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 15%)",
-        },
-        ".clip-tr-45": {
-          clipPath: "polygon(0 0, 85% 0, 100% 15%, 100% 100%, 0 100%)",
-        },
-        ".clip-bl-45": {
-          clipPath: "polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0 85%)",
-        },
-        ".clip-br-45": {
-          clipPath: "polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%)",
-        },
-         
-        ".clip-bottom-convex": {
-          clipPath: "ellipse(80% 90% at 50% 100%)",
-        },
-         
-      });
-    },
-  ],
+
 };
