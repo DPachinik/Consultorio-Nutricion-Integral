@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { FiX } from 'react-icons/fi';
+import { BsArrowRight } from 'react-icons/bs';
 
 const TarjetaServicios = ({ tratamientos }) => {
   const [description, setDescription] = useState(
@@ -28,20 +29,20 @@ const TarjetaServicios = ({ tratamientos }) => {
           style={{ backgroundImage: `url(${servicio.imagen})` }}
         >
           <div
-            className={`absolute inset-0 left-0 top-0 rounded-lg bg-black/50 ${description[index] ? 'bg-black' : ''} `}
+            className={`absolute inset-0 left-0 top-0 rounded-lg bg-gradient-to-b from-black/60 via-black/50 to-black/60 ${description[index] ? 'bg-white/80' : ''} `}
           />
 
           <div className="relative z-10 flex h-full w-full items-center justify-center text-center">
             {description[index] ? (
               <div>
-                <div className="mx-4 border-[1px] border-white bg-white/20 p-2">
+                <div className="mx-4">
                   <div
                     onClick={() => handleCloseClick(index)}
-                    className="flex h-auto justify-end pr-3"
+                    className="absolute right-4 top-4 flex h-auto w-fit items-center justify-center rounded-md bg-rose-800 hover:bg-rose-600"
                   >
-                    <FiX size={28} color="#fff" />
+                    <FiX size={26} color="#fff" />
                   </div>
-                  <p className="font-sourceSerif text-lg font-normal text-white drop-shadow-[0_0_10px_rgba(255,255,255,1)]">
+                  <p className="mb-4 px-4 font-sourceSerif text-lg font-normal text-white drop-shadow-[0_0_15px_rgba(255,255,255,1)]">
                     {servicio.titulo}
                   </p>
                   <p className="mx-3 text-justify font-mulish text-sm font-normal text-white">
@@ -50,13 +51,17 @@ const TarjetaServicios = ({ tratamientos }) => {
                 </div>
               </div>
             ) : (
-              <div
-                onClick={() => handleClickEnter(index)}
-                className="flex h-full w-full items-center justify-center"
-              >
-                <p className="font-sourceSerif text-lg font-normal text-white drop-shadow-[0_0_10px_rgba(255,255,255,1)]">
+              <div className="relative flex h-full w-full flex-col items-center justify-center">
+                <p className="text-center font-sourceSerif text-lg font-normal text-white drop-shadow-[0_0_10px_rgba(255,255,255,1)]">
                   {servicio.titulo}
                 </p>
+                <button
+                  onClick={() => handleClickEnter(index)}
+                  className="hover:cursor absolute bottom-2 right-2 flex items-center justify-center gap-2 rounded-md bg-lime-600 px-4 text-center text-white hover:bg-lime-500"
+                >
+                  ver más
+                  <BsArrowRight size={18} />
+                </button>
               </div>
             )}
           </div>

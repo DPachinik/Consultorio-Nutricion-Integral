@@ -3,7 +3,7 @@ import { GiCheckMark } from 'react-icons/gi';
 
 const Etapas = ({ etapas }) => {
   return (
-    <div className="container mx-auto flex flex-col items-center gap-4 px-3 md:flex-row">
+    <div className="container mx-auto flex flex-col items-center gap-8 px-3 md:flex-row">
       {etapas.map((etapa, index) => (
         <div
           key={index}
@@ -20,7 +20,7 @@ const Etapas = ({ etapas }) => {
               {etapa.titulo}
             </div>
 
-            <p className="font-medium">{etapa.parrafo1}</p>
+            <p className="mb-2 font-medium">{etapa.parrafo1}</p>
             {etapa.parrafo2 && <p className="font-medium">{etapa.parrafo2}</p>}
             {etapa.lista && (
               <ul>

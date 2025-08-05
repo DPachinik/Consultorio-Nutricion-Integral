@@ -10,10 +10,14 @@ const HomeMobile = () => {
         data-aos="fade-right"
       >
         <img src={Logo} alt="logotipo manzana" className="h-28 w-28" />
-        <p className="w-full bg-gradient-to-r from-rose-800 via-rose-700 to-rose-600 bg-clip-text pl-4 text-left font-lora text-[4vh] font-semibold italic text-transparent">
-          <span className="text-[5vh]">N</span>utrición{' '}
-          <span className="text-[5vh]">I</span>ntegral
-        </p>
+        <div className="flex">
+          <p className="w-full bg-gradient-to-r from-rose-700 via-rose-700 to-rose-600 bg-clip-text pl-4 text-left font-lora text-[4vh] font-semibold italic text-transparent">
+            <span className="text-[50px]">N</span>utrición{' '}
+          </p>
+          <p className="w-full bg-gradient-to-r from-rose-700 via-rose-700 to-rose-600 bg-clip-text pl-4 text-left font-lora text-[4vh] font-semibold italic text-transparent">
+            <span className="text-[50px]">I</span>ntegral
+          </p>
+        </div>
 
         <p className="w-full pb-4 pr-4 text-right font-lora text-lg italic text-primario">
           Estilo de vida saludable

@@ -36,7 +36,7 @@ export const DatosTarjeta = [
     {
       imagen: Mix,
       numero: '5°',
-      titulo: 'EMPRENDEDORA WELLNESS',
+      titulo: 'EMPRENDEDORA',
       parrafo1:
         'Además de asesorar a mis pacientes, desarrollo y elaboro productos nutricionalmente equilibrados, como snacks saludables, mix de frutas deshidratadas y granos, para fomentar una alimentación práctica y consciente.',
     },

@@ -17,15 +17,16 @@ const Tarjetas = ({ tarjetas }) => {
           data-aos={index % 2 === 0 ? 'fade-left' : 'fade-right'}
         >
           <div
-            className={`absolute -top-8 left-2 flex h-16 w-16 rounded-full bg-cover bg-center bg-no-repeat shadow-md shadow-primario md:h-20 md:w-20`}
-            style={{ backgroundImage: `url(${tarjeta.imagen})` }}
-          ></div>
+            className={`absolute -left-1 -top-8 flex h-20 w-20 rounded-full bg-cover bg-center bg-no-repeat shadow-md shadow-primario md:h-20 md:w-20`}
+          >
+            <img src={tarjeta.imagen} className="h-full w-full rounded-full" />
+          </div>
 
-          <div className="flex h-full w-full flex-col space-y-6 py-2 pl-8 md:space-y-10">
-            <h3 className="w-full pr-2 text-right font-lora text-lg font-medium text-rose-800 md:pr-6">
+          <div className="flex h-full w-full flex-col gap-2 py-2 pl-8">
+            <h3 className="w-full text-center font-lora text-lg font-medium text-rose-800 md:pr-6">
               {tarjeta.titulo}
             </h3>
-            <p className="text-md pt-2 font-mulish font-medium tracking-tight text-primario">
+            <p className="text-md font-mulish font-medium tracking-tight text-primario">
               {tarjeta.parrafo1}
             </p>
           </div>

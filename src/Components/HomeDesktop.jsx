@@ -5,7 +5,7 @@ import BotonWhastApp from '../Components/BotonWhastApp';
 const HomeDesktop = () => {
   return (
     <div>
-      <div className="hidden h-[calc(100dvh)] w-full grid-cols-[40%_auto] pt-[50px] md:grid">
+      <div className="hidden h-dvh w-full grid-cols-[40%_auto] pt-[50px] md:grid">
         <div
           className="flex h-full w-full items-end justify-end bg-alimentos bg-cover bg-center"
           data-aos="fade-right"
@@ -31,15 +31,18 @@ const HomeDesktop = () => {
           </div>
 
           <div
-            className="relative flex h-[200px] w-[200px] flex-col rounded-full shadow-[0_0_40px_theme('colors.lime.600')] ring-1 ring-lima"
+            className="relative flex h-[200px] w-[200px] flex-col rounded-full shadow-[0_0_40px_theme('colors.lime.600')] ring-1 ring-lima hover:scale-125"
             data-aos="fade-left"
           >
             <div className="absolute -left-2 top-[20px] w-fit rounded-2xl bg-lima px-3 font-mulish text-[18px] text-white">
               + Resultados
             </div>
 
-            <div className="absolute left-8 top-8 w-fit rounded-2xl px-3 font-mulish text-[18px] text-white">
-              <img src={icono} className="h-32 w-32" />
+            <div className="absolute left-8 top-10 w-fit rounded-2xl px-3 font-mulish text-[18px] text-white">
+              <img
+                src={icono}
+                className="h-28 w-28 duration-500 hover:rotate-12"
+              />
             </div>
 
             <div className="absolute bottom-[30px] right-1 w-fit rounded-2xl bg-lima px-3 font-mulish text-[18px] text-white">

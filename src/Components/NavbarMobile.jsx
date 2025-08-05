@@ -31,12 +31,12 @@ const NavbarMobile = ({ menuOpen, setMenuOpen, enlaces }) => {
         <div className="flex min-w-max select-none items-center gap-2">
           <img src={Logo} className="h-12 w-12" />
 
-          <p className="w-full font-lora text-sm font-medium italic text-rose-800">
+          <p className="text-md w-full font-lora font-medium italic text-rose-800">
             Nut. Jessica Pachinik
           </p>
         </div>
         <div
-          className={`Navbar-items absolute left-[0] top-[50px] flex h-[600px] w-full flex-col items-center border-b-[0.5px] border-black bg-white font-lora font-medium italic text-rose-800 ${menuOpen ? 'opacity-100' : 'pointer-events-none opacity-0'} transition-opacity duration-1000 ease-in-out md:hidden`}
+          className={`Navbar-items absolute left-[0] top-[50px] flex h-[600px] w-full flex-col items-center border-b-[0.5px] border-black bg-white font-lora font-medium italic text-rose-800 ${menuOpen ? 'animate-slide' : 'pointer-events-none opacity-0'} md:hidden`}
         >
           <ul
             className="flex h-full w-full flex-col items-center justify-center gap-[30px]"
@@ -53,8 +53,10 @@ const NavbarMobile = ({ menuOpen, setMenuOpen, enlaces }) => {
               </li>
             ))}
           </ul>
-          <div className="w-full pb-6 text-center text-primario">
-            alimenta tu cuerpo, honra tu espíritu...
+          <div className="flex h-[80px] w-full items-end justify-center pb-2 text-center text-primario">
+            <div className="mx-4 w-full border-t-[1px] border-rose-600 pb-1 pt-2">
+              alimenta tu cuerpo, honra tu espíritu...
+            </div>
           </div>
         </div>
 
@@ -75,7 +77,7 @@ const NavbarMobile = ({ menuOpen, setMenuOpen, enlaces }) => {
         </div>
       </nav>
       <div
-        className={`fixed inset-0 left-0 top-[650px] z-10 bg-black/35 ${menuOpen ? '' : 'hidden'} ${menuOpen ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'} transition-opacity duration-1000 ease-in-out`}
+        className={`fixed inset-0 left-0 top-[650px] z-10 bg-black/35 ${menuOpen ? 'animate-slide' : 'pointer-events-none opacity-0'} `}
         onClick={HandleCloseClick}
       />
     </div>

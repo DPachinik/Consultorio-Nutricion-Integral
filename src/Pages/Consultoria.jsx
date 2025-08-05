@@ -11,7 +11,7 @@ import Counter from '../Components/Counter';
 const Consultoria = () => {
   return (
     <div className="overflow-x-hidden bg-amber-50/10">
-      <div className="mb-8 flex h-[750px] w-full grid-cols-2 flex-col bg-encabezado bg-cover bg-bottom bg-no-repeat pt-[50px] md:grid md:h-[640px] md:bg-encabezadomd">
+      <div className="mb-8 flex h-[750px] w-full grid-cols-2 flex-col bg-encabezado bg-cover bg-bottom bg-no-repeat pt-[50px] md:grid md:h-[640px] md:bg-encabezadomd md:px-4">
         <h2 className="mx-auto my-6 justify-center text-center font-lora text-2xl font-medium text-rose-800 md:col-span-2">
           ¿Consultas Online?
         </h2>
@@ -30,30 +30,36 @@ const Consultoria = () => {
             <span className="text-2xl font-bold"> 100% ONLINE</span> Desde
             Cualquier Lugar!
           </p>
-          <p className="lg:text-md mx-4 mb-6 text-center font-mulish font-medium italic text-primario">
+          <p className="mx-4 mb-6 text-center font-mulish font-medium italic text-primario lg:text-lg">
             Mi trabajo trasciende fronteras y, sin necesidad de salir de casa,
             recibirás un acompañamiento cercano e individualizado en cada etapa
             del proceso. Disfruta de la flexibilidad y comodidad de una atención
             personalizada, con la misma calidad y dedicación que en una consulta
             presencial, sin importar tu ubicación.
           </p>
+          <div className="hidden md:flex">
+            <BotonConsulta />
+          </div>
         </div>
       </div>
-      <BotonConsulta />
 
-      <h2 className="my-12 flex justify-center text-center font-lora text-2xl font-medium text-rose-800">
+      <div className="md:hidden">
+        <BotonConsulta />
+      </div>
+
+      <h2 className="mb-12 mt-20 flex justify-center text-center font-lora text-2xl font-medium text-rose-800">
         ¿Cómo Funciona la Consulta?
       </h2>
       <Etapas etapas={etapasDeConsulta} />
 
       <Counter />
 
-      <h2 className="my-12 flex justify-center text-center font-lora text-2xl font-medium text-rose-800">
+      <h2 className="mb-12 mt-20 flex justify-center text-center font-lora text-2xl font-medium text-rose-800">
         ¿Mis Pacientes? estos son algunos de ellos...
       </h2>
       <Carousel slides={SlidesCard2} />
 
-      <h2 className="my-12 flex justify-center text-center font-lora text-2xl font-medium text-rose-800">
+      <h2 className="mb-12 mt-20 flex justify-center text-center font-lora text-2xl font-medium text-rose-800">
         ¿Por qué Optar por un Seguimiento Nutricional?
       </h2>
       <TarjetaServicios tratamientos={serviciosDeTratamientos} />

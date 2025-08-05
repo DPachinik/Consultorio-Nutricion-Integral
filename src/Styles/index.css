@@ -23,3 +23,41 @@
     content: "▼"; 
     margin-left: 8px;
   }
+
+  @layer utilities{
+    .animate-pop{
+      animation-name: animate-pop;
+      animation-duration: 1s;
+    }
+
+    @keyframes animate-pop {
+      0%{
+        opacity:0;
+        transform:scale(0.7, 0.7);
+      }
+      50% {
+        opacity: 100;
+        transform: scale(1,1);
+      }
+      
+    }
+
+    .animate-slide{
+      animation-name: animate-slide;
+      animation-duration: 0.7s ;
+    }
+
+    @keyframes animate-slide {
+
+      0%{
+        opacity: 0;
+        transform: translateY(-100%);
+      }
+
+      100%{
+        opacity: 100;
+        transform: translateY(0);
+      }
+      
+    }
+  }

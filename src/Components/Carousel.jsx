@@ -16,7 +16,7 @@ const Carousel = ({ slides }) => {
   }, []);
 
   return (
-    <div className="flex w-full flex-col items-center justify-center p-8">
+    <div className="flex w-full flex-col items-center justify-center">
       <motion.div
         whileTap={{ cursor: 'grabbing' }}
         className="mb-8 flex h-[380px] w-full max-w-[360px] cursor-grab overflow-hidden md:max-w-[640px] lg:max-w-[950px]"
@@ -34,7 +34,7 @@ const Carousel = ({ slides }) => {
           {slides.map((elementos, index) => (
             <motion.div
               key={index}
-              className={`flex ${imagenes ? 'min-h-[150px]' : 'min-h-[380px]'} min-w-[290px] max-w-[300px] flex-col items-center gap-3 rounded-xl bg-gradient-to-b from-white via-subtitulo to-subtitulo text-justify text-white shadow-xl shadow-subtitulo`}
+              className={`flex ${imagenes ? 'min-h-[150px]' : 'min-h-[380px]'} min-w-[290px] max-w-[300px] flex-col items-center gap-3 rounded-xl bg-gradient-to-b from-white via-subtitulo to-subtitulo text-white shadow-xl shadow-subtitulo`}
             >
               <img
                 src={elementos.imagen}
