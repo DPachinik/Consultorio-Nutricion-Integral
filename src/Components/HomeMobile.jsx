@@ -43,7 +43,7 @@ const HomeMobile = () => {
         </div>
 
         <div className="flex w-full flex-col items-end justify-end pr-3 pt-3">
-          <p className="whitespace-nowrap font-lora text-xl font-medium italic text-rose-800">
+          <p className="whitespace-nowrap font-lora text-lg font-medium italic text-rose-800">
             Mis 4 pilares de la nutrición
           </p>
           <Pilares />
