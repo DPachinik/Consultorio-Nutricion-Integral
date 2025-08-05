@@ -16,7 +16,7 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="h-dvh">
+    <div className="h-screen">
       <AosInit />
       <ToastContainer autoClose={2000} />
       <Router>

@@ -6,16 +6,16 @@ const HomeMobile = () => {
   return (
     <div className="container mx-auto flex h-full flex-col items-center justify-evenly px-2 md:hidden">
       <div
-        className="w-full place-items-center gap-4 pt-6 leading-[1.5]"
+        className="w-full place-items-center gap-4 leading-[1.5]"
         data-aos="fade-right"
       >
-        <img src={Logo} alt="logotipo manzana" className="h-28 w-28" />
+        <img src={Logo} alt="logotipo manzana" className="h-24 w-24" />
         <div className="flex">
           <p className="w-full bg-gradient-to-r from-rose-700 via-rose-700 to-rose-600 bg-clip-text pl-4 text-left font-lora text-[4vh] font-semibold italic text-transparent">
-            <span className="text-[50px]">N</span>utrición{' '}
+            <span className="text-[5vh]">N</span>utrición{' '}
           </p>
           <p className="w-full bg-gradient-to-r from-rose-700 via-rose-700 to-rose-600 bg-clip-text pl-4 text-left font-lora text-[4vh] font-semibold italic text-transparent">
-            <span className="text-[50px]">I</span>ntegral
+            <span className="text-[5vh]">I</span>ntegral
           </p>
         </div>
 
@@ -25,7 +25,7 @@ const HomeMobile = () => {
       </div>
 
       <div
-        className="relative flex h-[200px] min-h-[150px] w-[200px] min-w-[150px] flex-col rounded-full bg-alimentos bg-cover bg-center shadow-[0_0_40px_theme('colors.lime.600')] ring-1 ring-lima"
+        className="relative flex h-[170px] min-h-[150px] w-[170px] min-w-[150px] flex-col rounded-full bg-alimentos bg-cover bg-center shadow-[0_0_40px_theme('colors.lime.600')] ring-1 ring-lima"
         data-aos="fade-left"
       >
         <div className="absolute -left-4 top-[30px] w-fit rounded-2xl bg-lima px-3 font-mulish text-[18px] text-white">
@@ -43,7 +43,7 @@ const HomeMobile = () => {
         </div>
 
         <div className="flex w-full flex-col items-end justify-end pr-3 pt-3">
-          <p className="font-lora text-xl font-medium italic text-rose-800">
+          <p className="whitespace-nowrap font-lora text-xl font-medium italic text-rose-800">
             Mis 4 pilares de la nutrición
           </p>
           <Pilares />

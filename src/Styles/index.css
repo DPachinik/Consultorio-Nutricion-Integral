@@ -44,7 +44,7 @@
 
     .animate-slide{
       animation-name: animate-slide;
-      animation-duration: 0.7s ;
+      animation-duration: 0.9s ;
     }
 
     @keyframes animate-slide {
